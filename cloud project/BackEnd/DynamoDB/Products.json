@@ -1,0 +1,174 @@
+{
+  "Products": [
+    {
+      "ProductID": {
+        "S": "PROD001"
+      },
+      "Category": {
+        "S": "อาหาร"
+      },
+      "Name": {
+        "S": "ธาตุ"
+      },
+      "Price": {
+        "N": "371"
+      },
+      "Stock": {
+        "N": "59"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD002"
+      },
+      "Category": {
+        "S": "อาหาร"
+      },
+      "Name": {
+        "S": "หมุน"
+      },
+      "Price": {
+        "N": "315"
+      },
+      "Stock": {
+        "N": "32"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD003"
+      },
+      "Category": {
+        "S": "เครื่องดื่ม"
+      },
+      "Name": {
+        "S": "เนื้อ"
+      },
+      "Price": {
+        "N": "77"
+      },
+      "Stock": {
+        "N": "13"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD004"
+      },
+      "Category": {
+        "S": "ของแมว"
+      },
+      "Name": {
+        "S": "เยอะ"
+      },
+      "Price": {
+        "N": "218"
+      },
+      "Stock": {
+        "N": "80"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD005"
+      },
+      "Category": {
+        "S": "อาหาร"
+      },
+      "Name": {
+        "S": "หล่น"
+      },
+      "Price": {
+        "N": "242"
+      },
+      "Stock": {
+        "N": "72"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD006"
+      },
+      "Category": {
+        "S": "ของแมว"
+      },
+      "Name": {
+        "S": "โต"
+      },
+      "Price": {
+        "N": "208"
+      },
+      "Stock": {
+        "N": "37"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD007"
+      },
+      "Category": {
+        "S": "ของแมว"
+      },
+      "Name": {
+        "S": "นั่ง"
+      },
+      "Price": {
+        "N": "364"
+      },
+      "Stock": {
+        "N": "11"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD008"
+      },
+      "Category": {
+        "S": "ของแมว"
+      },
+      "Name": {
+        "S": "ปี่"
+      },
+      "Price": {
+        "N": "39"
+      },
+      "Stock": {
+        "N": "91"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD009"
+      },
+      "Category": {
+        "S": "ของแมว"
+      },
+      "Name": {
+        "S": "ทหาร"
+      },
+      "Price": {
+        "N": "335"
+      },
+      "Stock": {
+        "N": "81"
+      }
+    },
+    {
+      "ProductID": {
+        "S": "PROD010"
+      },
+      "Category": {
+        "S": "อาหาร"
+      },
+      "Name": {
+        "S": "แก่"
+      },
+      "Price": {
+        "N": "351"
+      },
+      "Stock": {
+        "N": "56"
+      }
+    }
+  ]
+}
