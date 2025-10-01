@@ -1,0 +1,84 @@
+{
+"Sales": [
+  {
+    "SaleID": { "S": "SALE001" },
+    "Date": { "S": "2025-09-20T10:15:00Z" },
+    "ItemCount": { "N": "5" },
+    "CustomerCount": { "N": "1" },
+    "PaymentType": { "S": "CreditCard" },
+    "TotalAmount": { "N": "1250.50" }
+  },
+  {
+    "SaleID": { "S": "SALE002" },
+    "Date": { "S": "2025-09-21T14:30:00Z" },
+    "ItemCount": { "N": "2" },
+    "CustomerCount": { "N": "1" },
+    "PaymentType": { "S": "Cash" },
+    "TotalAmount": { "N": "340.00" }
+  },
+  {
+    "SaleID": { "S": "SALE003" },
+    "Date": { "S": "2025-09-21T18:42:00Z" },
+    "ItemCount": { "N": "8" },
+    "CustomerCount": { "N": "2" },
+    "PaymentType": { "S": "PromptPay" },
+    "TotalAmount": { "N": "2245.75" }
+  },
+  {
+    "SaleID": { "S": "SALE004" },
+    "Date": { "S": "2025-09-22T09:10:00Z" },
+    "ItemCount": { "N": "1" },
+    "CustomerCount": { "N": "1" },
+    "PaymentType": { "S": "Cash" },
+    "TotalAmount": { "N": "89.90" }
+  },
+  {
+    "SaleID": { "S": "SALE005" },
+    "Date": { "S": "2025-09-23T12:55:00Z" },
+    "ItemCount": { "N": "4" },
+    "CustomerCount": { "N": "3" },
+    "PaymentType": { "S": "CreditCard" },
+    "TotalAmount": { "N": "1567.00" }
+  },
+  {
+    "SaleID": { "S": "SALE006" },
+    "Date": { "S": "2025-09-24T20:05:00Z" },
+    "ItemCount": { "N": "6" },
+    "CustomerCount": { "N": "2" },
+    "PaymentType": { "S": "BankTransfer" },
+    "TotalAmount": { "N": "1980.25" }
+  },
+  {
+    "SaleID": { "S": "SALE007" },
+    "Date": { "S": "2025-09-25T16:20:00Z" },
+    "ItemCount": { "N": "3" },
+    "CustomerCount": { "N": "1" },
+    "PaymentType": { "S": "PromptPay" },
+    "TotalAmount": { "N": "735.00" }
+  },
+  {
+    "SaleID": { "S": "SALE008" },
+    "Date": { "S": "2025-09-26T08:47:00Z" },
+    "ItemCount": { "N": "7" },
+    "CustomerCount": { "N": "2" },
+    "PaymentType": { "S": "Cash" },
+    "TotalAmount": { "N": "1720.40" }
+  },
+  {
+    "SaleID": { "S": "SALE009" },
+    "Date": { "S": "2025-09-27T11:11:00Z" },
+    "ItemCount": { "N": "10" },
+    "CustomerCount": { "N": "4" },
+    "PaymentType": { "S": "CreditCard" },
+    "TotalAmount": { "N": "3240.90" }
+  },
+  {
+    "SaleID": { "S": "SALE010" },
+    "Date": { "S": "2025-09-28T19:33:00Z" },
+    "ItemCount": { "N": "2" },
+    "CustomerCount": { "N": "1" },
+    "PaymentType": { "S": "BankTransfer" },
+    "TotalAmount": { "N": "420.00" }
+  }
+]
+}

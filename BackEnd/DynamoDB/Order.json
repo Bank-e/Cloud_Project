@@ -1,0 +1,64 @@
+{
+"Order": [
+  {
+    "OrderID": { "S": "ORDER001" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD001" },
+    "QTY_Product": { "N": "2" }
+  },
+  {
+    "OrderID": { "S": "ORDER002" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD003" },
+    "QTY_Product": { "N": "1" }
+  },
+  {
+    "OrderID": { "S": "ORDER003" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD002" },
+    "QTY_Product": { "N": "4" }
+  },
+  {
+    "OrderID": { "S": "ORDER004" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD004" },
+    "QTY_Product": { "N": "3" }
+  },
+  {
+    "OrderID": { "S": "ORDER005" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD005" },
+    "QTY_Product": { "N": "1" }
+  },
+  {
+    "OrderID": { "S": "ORDER006" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD006" },
+    "QTY_Product": { "N": "5" }
+  },
+  {
+    "OrderID": { "S": "ORDER007" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD002" },
+    "QTY_Product": { "N": "2" }
+  },
+  {
+    "OrderID": { "S": "ORDER008" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD003" },
+    "QTY_Product": { "N": "1" }
+  },
+  {
+    "OrderID": { "S": "ORDER009" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD001" },
+    "QTY_Product": { "N": "3" }
+  },
+  {
+    "OrderID": { "S": "ORDER010" },
+    "CustomerID": { "S": "CUST001" },
+    "ProductID": { "S": "PROD004" },
+    "QTY_Product": { "N": "2" }
+  }
+]
+}
