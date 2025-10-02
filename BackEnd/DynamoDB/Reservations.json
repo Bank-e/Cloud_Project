@@ -1,236 +1,4 @@
 {
-  "Customers": [
-    {
-      "CustomerID": {
-        "S": "CUST001"
-      },
-      "Name": {
-        "S": "วิกิจ บุนยะศัพท์"
-      },
-      "PasswordHash": {
-        "S": "hash_+3mKTPyf"
-      },
-      "Phone": {
-        "S": "052-781476"
-      },
-      "Email": {
-        "S": "dwngcchanthrnabenuuengn@bcchkchatrphiethiiyngkham.go.th"
-      },
-      "Points": {
-        "N": "249"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676370Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST002"
-      },
-      "Name": {
-        "S": "อำไพ ธัญเสถียร"
-      },
-      "PasswordHash": {
-        "S": "hash_M_l$4Kkv"
-      },
-      "Phone": {
-        "S": "+66 680 035 258"
-      },
-      "Email": {
-        "S": "phrpraanii65@haanghunswnsaamay.net"
-      },
-      "Points": {
-        "N": "136"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676504Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST003"
-      },
-      "Name": {
-        "S": "ฐิติกุล ไทนิยม"
-      },
-      "PasswordHash": {
-        "S": "hash_(!3BujzU"
-      },
-      "Phone": {
-        "S": "0858103744"
-      },
-      "Email": {
-        "S": "laddaathnadkaarynt@ymail.com"
-      },
-      "Points": {
-        "N": "171"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676594Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST004"
-      },
-      "Name": {
-        "S": "มนรัตน์ ศรีเผด็จ"
-      },
-      "PasswordHash": {
-        "S": "hash_WtW(6G3f"
-      },
-      "Phone": {
-        "S": "0 937 521 947"
-      },
-      "Email": {
-        "S": "ythuuphm@icloud.com"
-      },
-      "Points": {
-        "N": "232"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676681Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST005"
-      },
-      "Name": {
-        "S": "จักรพันธ์ นับเนื่องนอ"
-      },
-      "PasswordHash": {
-        "S": "hash_@1q1cvKg"
-      },
-      "Phone": {
-        "S": "+664 005 7273"
-      },
-      "Email": {
-        "S": "yekhiiywkhuy@ymail.com"
-      },
-      "Points": {
-        "N": "265"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676743Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST006"
-      },
-      "Name": {
-        "S": "เนติลักษณ์ แนวพนิช"
-      },
-      "PasswordHash": {
-        "S": "hash_!l35r#Wv"
-      },
-      "Phone": {
-        "S": "+662 564 0754"
-      },
-      "Email": {
-        "S": "rchtkrthnadhatthkrrm@ngaamphiechsthphuuechphl.com"
-      },
-      "Points": {
-        "N": "277"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676842Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST007"
-      },
-      "Name": {
-        "S": "โสภณิตา ตั้งกุลงาม"
-      },
-      "PasswordHash": {
-        "S": "hash_(bj&u2Tp"
-      },
-      "Phone": {
-        "S": "080-239-9292"
-      },
-      "Email": {
-        "S": "buybamrungcchiiraaphrn@hsnthnadhatthkrrmkhnsng.go.th"
-      },
-      "Points": {
-        "N": "181"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676931Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST008"
-      },
-      "Name": {
-        "S": "ชลิดา เมืองสุข"
-      },
-      "PasswordHash": {
-        "S": "hash_!d7D0x@h"
-      },
-      "Phone": {
-        "S": "+662 535 4536"
-      },
-      "Email": {
-        "S": "nathsakdi05@icloud.com"
-      },
-      "Points": {
-        "N": "3"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676994Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST009"
-      },
-      "Name": {
-        "S": "สหัสมณี เนื้อนุ่ม"
-      },
-      "PasswordHash": {
-        "S": "hash_%x03CEIz"
-      },
-      "Phone": {
-        "S": "0-2923-7022"
-      },
-      "Email": {
-        "S": "tantraacchinhrthay@brisath.in.th"
-      },
-      "Points": {
-        "N": "235"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677086Z"
-      }
-    },
-    {
-      "CustomerID": {
-        "S": "CUST010"
-      },
-      "Name": {
-        "S": "ชัชนันท์ เนื่องนนท์"
-      },
-      "PasswordHash": {
-        "S": "hash_Rh%q1LDy"
-      },
-      "Phone": {
-        "S": "+66 7174 8500"
-      },
-      "Email": {
-        "S": "rththichkrnkthng@gmail.com"
-      },
-      "Points": {
-        "N": "145"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677154Z"
-      }
-    }
-  ],
   "Reservations": [
     {
       "ReservationID": {
@@ -253,9 +21,6 @@
       },
       "Status": {
         "S": "cancelled"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677380Z"
       }
     },
     {
@@ -279,9 +44,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677403Z"
       }
     },
     {
@@ -305,9 +67,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677423Z"
       }
     },
     {
@@ -331,9 +90,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677442Z"
       }
     },
     {
@@ -357,9 +113,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677459Z"
       }
     },
     {
@@ -383,9 +136,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677477Z"
       }
     },
     {
@@ -409,9 +159,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677495Z"
       }
     },
     {
@@ -435,9 +182,6 @@
       },
       "Status": {
         "S": "cancelled"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677516Z"
       }
     },
     {
@@ -461,9 +205,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677536Z"
       }
     },
     {
@@ -487,9 +228,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677556Z"
       }
     },
     {
@@ -513,9 +251,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T15:00:00Z"
       }
     },
     {
@@ -539,9 +274,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T15:05:00Z"
       }
     },
     {
@@ -565,9 +297,6 @@
       },
       "Status": {
         "S": "cancelled"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T15:10:00Z"
       }
     },
     {
@@ -591,9 +320,6 @@
       },
       "Status": {
         "S": "pending"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T15:15:00Z"
       }
     },
     {
@@ -617,585 +343,6 @@
       },
       "Status": {
         "S": "confirmed"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T15:20:00Z"
-      }
-    }
-  ],
-  "Sales": [
-    {
-      "SaleID": {
-        "S": "SALE001"
-      },
-      "Date": {
-        "S": "2025-09-13"
-      },
-      "ItemCount": {
-        "N": "1"
-      },
-      "CustomerCount": {
-        "N": "1"
-      },
-      "PaymentType": {
-        "S": "PromptPay"
-      },
-      "TotalAmount": {
-        "N": "301"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE002"
-      },
-      "Date": {
-        "S": "2025-09-23"
-      },
-      "ItemCount": {
-        "N": "5"
-      },
-      "CustomerCount": {
-        "N": "3"
-      },
-      "PaymentType": {
-        "S": "Credit"
-      },
-      "TotalAmount": {
-        "N": "464"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE003"
-      },
-      "Date": {
-        "S": "2025-09-17"
-      },
-      "ItemCount": {
-        "N": "10"
-      },
-      "CustomerCount": {
-        "N": "5"
-      },
-      "PaymentType": {
-        "S": "Cash"
-      },
-      "TotalAmount": {
-        "N": "895"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE004"
-      },
-      "Date": {
-        "S": "2025-09-19"
-      },
-      "ItemCount": {
-        "N": "9"
-      },
-      "CustomerCount": {
-        "N": "1"
-      },
-      "PaymentType": {
-        "S": "Cash"
-      },
-      "TotalAmount": {
-        "N": "278"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE005"
-      },
-      "Date": {
-        "S": "2025-09-05"
-      },
-      "ItemCount": {
-        "N": "1"
-      },
-      "CustomerCount": {
-        "N": "3"
-      },
-      "PaymentType": {
-        "S": "Credit"
-      },
-      "TotalAmount": {
-        "N": "838"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE006"
-      },
-      "Date": {
-        "S": "2025-09-22"
-      },
-      "ItemCount": {
-        "N": "10"
-      },
-      "CustomerCount": {
-        "N": "3"
-      },
-      "PaymentType": {
-        "S": "Cash"
-      },
-      "TotalAmount": {
-        "N": "613"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE007"
-      },
-      "Date": {
-        "S": "2025-09-19"
-      },
-      "ItemCount": {
-        "N": "1"
-      },
-      "CustomerCount": {
-        "N": "1"
-      },
-      "PaymentType": {
-        "S": "Credit"
-      },
-      "TotalAmount": {
-        "N": "653"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE008"
-      },
-      "Date": {
-        "S": "2025-09-20"
-      },
-      "ItemCount": {
-        "N": "10"
-      },
-      "CustomerCount": {
-        "N": "5"
-      },
-      "PaymentType": {
-        "S": "Credit"
-      },
-      "TotalAmount": {
-        "N": "190"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE009"
-      },
-      "Date": {
-        "S": "2025-09-27"
-      },
-      "ItemCount": {
-        "N": "5"
-      },
-      "CustomerCount": {
-        "N": "3"
-      },
-      "PaymentType": {
-        "S": "Cash"
-      },
-      "TotalAmount": {
-        "N": "960"
-      }
-    },
-    {
-      "SaleID": {
-        "S": "SALE010"
-      },
-      "Date": {
-        "S": "2025-09-08"
-      },
-      "ItemCount": {
-        "N": "6"
-      },
-      "CustomerCount": {
-        "N": "1"
-      },
-      "PaymentType": {
-        "S": "Cash"
-      },
-      "TotalAmount": {
-        "N": "114"
-      }
-    }
-  ],
-  "Products": [
-    {
-      "ProductID": {
-        "S": "PROD001"
-      },
-      "Category": {
-        "S": "อาหาร"
-      },
-      "Name": {
-        "S": "ธาตุ"
-      },
-      "Price": {
-        "N": "371"
-      },
-      "Stock": {
-        "N": "59"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD002"
-      },
-      "Category": {
-        "S": "อาหาร"
-      },
-      "Name": {
-        "S": "หมุน"
-      },
-      "Price": {
-        "N": "315"
-      },
-      "Stock": {
-        "N": "32"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD003"
-      },
-      "Category": {
-        "S": "เครื่องดื่ม"
-      },
-      "Name": {
-        "S": "เนื้อ"
-      },
-      "Price": {
-        "N": "77"
-      },
-      "Stock": {
-        "N": "13"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD004"
-      },
-      "Category": {
-        "S": "ของแมว"
-      },
-      "Name": {
-        "S": "เยอะ"
-      },
-      "Price": {
-        "N": "218"
-      },
-      "Stock": {
-        "N": "80"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD005"
-      },
-      "Category": {
-        "S": "อาหาร"
-      },
-      "Name": {
-        "S": "หล่น"
-      },
-      "Price": {
-        "N": "242"
-      },
-      "Stock": {
-        "N": "72"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD006"
-      },
-      "Category": {
-        "S": "ของแมว"
-      },
-      "Name": {
-        "S": "โต"
-      },
-      "Price": {
-        "N": "208"
-      },
-      "Stock": {
-        "N": "37"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD007"
-      },
-      "Category": {
-        "S": "ของแมว"
-      },
-      "Name": {
-        "S": "นั่ง"
-      },
-      "Price": {
-        "N": "364"
-      },
-      "Stock": {
-        "N": "11"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD008"
-      },
-      "Category": {
-        "S": "ของแมว"
-      },
-      "Name": {
-        "S": "ปี่"
-      },
-      "Price": {
-        "N": "39"
-      },
-      "Stock": {
-        "N": "91"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD009"
-      },
-      "Category": {
-        "S": "ของแมว"
-      },
-      "Name": {
-        "S": "ทหาร"
-      },
-      "Price": {
-        "N": "335"
-      },
-      "Stock": {
-        "N": "81"
-      }
-    },
-    {
-      "ProductID": {
-        "S": "PROD010"
-      },
-      "Category": {
-        "S": "อาหาร"
-      },
-      "Name": {
-        "S": "แก่"
-      },
-      "Price": {
-        "N": "351"
-      },
-      "Stock": {
-        "N": "56"
-      }
-    }
-  ],
-  "RewardsPromotions": [
-    {
-      "Code": {
-        "S": "REWARD001"
-      },
-      "Discount": {
-        "N": "15"
-      },
-      "Description": {
-        "S": "อิฐขนมท้องฟ้าตัวอย่างวาดมิตรตรวจ "
-      },
-      "StartDate": {
-        "S": "2025-09-27"
-      },
-      "EndDate": {
-        "S": "2025-10-30"
-      },
-      "MinPoint": {
-        "N": "90"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD002"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "เสรีนิยมพิพักพิพ่วนทวดรถถังสาธารณรัฐ "
-      },
-      "StartDate": {
-        "S": "2025-09-20"
-      },
-      "EndDate": {
-        "S": "2025-12-03"
-      },
-      "MinPoint": {
-        "N": "63"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD003"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "กลสารวัตรครูเล่ม "
-      },
-      "StartDate": {
-        "S": "2025-09-20"
-      },
-      "EndDate": {
-        "S": "2025-10-31"
-      },
-      "MinPoint": {
-        "N": "24"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD004"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "แหย่หรือข้าวหยักจัด "
-      },
-      "StartDate": {
-        "S": "2025-09-22"
-      },
-      "EndDate": {
-        "S": "2025-11-30"
-      },
-      "MinPoint": {
-        "N": "66"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD005"
-      },
-      "Discount": {
-        "N": "5"
-      },
-      "Description": {
-        "S": "พ่อสลับโผล่อธิษฐาน "
-      },
-      "StartDate": {
-        "S": "2025-09-25"
-      },
-      "EndDate": {
-        "S": "2025-12-24"
-      },
-      "MinPoint": {
-        "N": "75"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD006"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "กิ่งไม้สำหรับหาบจัดบัดนี้น้ำหวาน "
-      },
-      "StartDate": {
-        "S": "2025-09-27"
-      },
-      "EndDate": {
-        "S": "2025-10-28"
-      },
-      "MinPoint": {
-        "N": "50"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD007"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "คู่หมอกคาวคำสั่งใหม่ประชาธิปไตยชู "
-      },
-      "StartDate": {
-        "S": "2025-09-17"
-      },
-      "EndDate": {
-        "S": "2025-10-28"
-      },
-      "MinPoint": {
-        "N": "72"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD008"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "พนมมือปูชูน้องเมตตาพักผ่อน "
-      },
-      "StartDate": {
-        "S": "2025-09-21"
-      },
-      "EndDate": {
-        "S": "2025-12-24"
-      },
-      "MinPoint": {
-        "N": "77"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD009"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "เศรษฐกิจแต่งนิ่มซ่อนบันได "
-      },
-      "StartDate": {
-        "S": "2025-09-22"
-      },
-      "EndDate": {
-        "S": "2025-11-21"
-      },
-      "MinPoint": {
-        "N": "50"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD010"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "ขนมพับน้ำหวานถีบแรกร่างมลายู "
-      },
-      "StartDate": {
-        "S": "2025-09-24"
-      },
-      "EndDate": {
-        "S": "2025-11-08"
-      },
-      "MinPoint": {
-        "N": "49"
       }
     }
   ]

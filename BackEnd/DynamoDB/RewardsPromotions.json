@@ -1,202 +1,82 @@
 [
-    {
-      "Code": {
-        "S": "REWARD001"
-      },
-      "Discount": {
-        "N": "15"
-      },
-      "Description": {
-        "S": "อิฐขนมท้องฟ้าตัวอย่างวาดมิตรตรวจ "
-      },
-      "StartDate": {
-        "S": "2025-09-27"
-      },
-      "EndDate": {
-        "S": "2025-10-30"
-      },
-      "MinPoint": {
-        "N": "90"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD002"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "เสรีนิยมพิพักพิพ่วนทวดรถถังสาธารณรัฐ "
-      },
-      "StartDate": {
-        "S": "2025-09-20"
-      },
-      "EndDate": {
-        "S": "2025-12-03"
-      },
-      "MinPoint": {
-        "N": "63"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD003"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "กลสารวัตรครูเล่ม "
-      },
-      "StartDate": {
-        "S": "2025-09-20"
-      },
-      "EndDate": {
-        "S": "2025-10-31"
-      },
-      "MinPoint": {
-        "N": "24"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD004"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "แหย่หรือข้าวหยักจัด "
-      },
-      "StartDate": {
-        "S": "2025-09-22"
-      },
-      "EndDate": {
-        "S": "2025-11-30"
-      },
-      "MinPoint": {
-        "N": "66"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD005"
-      },
-      "Discount": {
-        "N": "5"
-      },
-      "Description": {
-        "S": "พ่อสลับโผล่อธิษฐาน "
-      },
-      "StartDate": {
-        "S": "2025-09-25"
-      },
-      "EndDate": {
-        "S": "2025-12-24"
-      },
-      "MinPoint": {
-        "N": "75"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD006"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "กิ่งไม้สำหรับหาบจัดบัดนี้น้ำหวาน "
-      },
-      "StartDate": {
-        "S": "2025-09-27"
-      },
-      "EndDate": {
-        "S": "2025-10-28"
-      },
-      "MinPoint": {
-        "N": "50"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD007"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "คู่หมอกคาวคำสั่งใหม่ประชาธิปไตยชู "
-      },
-      "StartDate": {
-        "S": "2025-09-17"
-      },
-      "EndDate": {
-        "S": "2025-10-28"
-      },
-      "MinPoint": {
-        "N": "72"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD008"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "พนมมือปูชูน้องเมตตาพักผ่อน "
-      },
-      "StartDate": {
-        "S": "2025-09-21"
-      },
-      "EndDate": {
-        "S": "2025-12-24"
-      },
-      "MinPoint": {
-        "N": "77"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD009"
-      },
-      "Discount": {
-        "N": "10"
-      },
-      "Description": {
-        "S": "เศรษฐกิจแต่งนิ่มซ่อนบันได "
-      },
-      "StartDate": {
-        "S": "2025-09-22"
-      },
-      "EndDate": {
-        "S": "2025-11-21"
-      },
-      "MinPoint": {
-        "N": "50"
-      }
-    },
-    {
-      "Code": {
-        "S": "REWARD010"
-      },
-      "Discount": {
-        "N": "20"
-      },
-      "Description": {
-        "S": "ขนมพับน้ำหวานถีบแรกร่างมลายู "
-      },
-      "StartDate": {
-        "S": "2025-09-24"
-      },
-      "EndDate": {
-        "S": "2025-11-08"
-      },
-      "MinPoint": {
-        "N": "49"
-      }
-    }
-  ]
+  {
+    "Code": { "S": "REWARD001" },
+    "Discount": { "N": "15" },
+    "Description": { "S": "รับส่วนลด 15% เมื่อทานครบ 500 บาทที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-27" },
+    "EndDate": { "S": "2025-10-30" },
+    "MinPoint": { "N": "60" }
+  },
+  {
+    "Code": { "S": "REWARD002" },
+    "Discount": { "N": "20" },
+    "Description": { "S": "รับส่วนลด 20% สำหรับเครื่องดื่มทุกเมนูที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-20" },
+    "EndDate": { "S": "2025-12-03" },
+    "MinPoint": { "N": "80" }
+  },
+  {
+    "Code": { "S": "REWARD003" },
+    "Discount": { "N": "20" },
+    "Description": { "S": "รับส่วนลด 20% เมื่อซื้อเค้กและเบเกอรี่ที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-20" },
+    "EndDate": { "S": "2025-10-31" },
+    "MinPoint": { "N": "80" }
+  },
+  {
+    "Code": { "S": "REWARD004" },
+    "Discount": { "N": "10" },
+    "Description": { "S": "รับส่วนลด 10% สำหรับอาหารจานหลักที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-22" },
+    "EndDate": { "S": "2025-11-30" },
+    "MinPoint": { "N": "40" }
+  },
+  {
+    "Code": { "S": "REWARD005" },
+    "Discount": { "N": "5" },
+    "Description": { "S": "รับส่วนลด 5% สำหรับทุกเมนูเมื่อแสดงบัตรสมาชิกที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-25" },
+    "EndDate": { "S": "2025-12-24" },
+    "MinPoint": { "N": "20" }
+  },
+  {
+    "Code": { "S": "REWARD006" },
+    "Discount": { "N": "10" },
+    "Description": { "S": "รับส่วนลด 10% สำหรับเมนูเครื่องดื่มร้อนที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-27" },
+    "EndDate": { "S": "2025-10-28" },
+    "MinPoint": { "N": "40" }
+  },
+  {
+    "Code": { "S": "REWARD007" },
+    "Discount": { "N": "20" },
+    "Description": { "S": "รับส่วนลด 20% เมื่อทานครบ 300 บาทที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-17" },
+    "EndDate": { "S": "2025-10-28" },
+    "MinPoint": { "N": "80" }
+  },
+  {
+    "Code": { "S": "REWARD008" },
+    "Discount": { "N": "10" },
+    "Description": { "S": "รับส่วนลด 10% สำหรับเมนูพิเศษประจำเดือนที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-21" },
+    "EndDate": { "S": "2025-12-24" },
+    "MinPoint": { "N": "40" }
+  },
+  {
+    "Code": { "S": "REWARD009" },
+    "Discount": { "N": "10" },
+    "Description": { "S": "รับส่วนลด 10% สำหรับเมนูเครื่องดื่มเย็นที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-22" },
+    "EndDate": { "S": "2025-11-21" },
+    "MinPoint": { "N": "40" }
+  },
+  {
+    "Code": { "S": "REWARD010" },
+    "Discount": { "N": "20" },
+    "Description": { "S": "รับส่วนลด 20% สำหรับพิซซ่าและพาสต้าโฮมเมดที่คาเฟ่แมว Cat Excalibur" },
+    "StartDate": { "S": "2025-09-24" },
+    "EndDate": { "S": "2025-11-08" },
+    "MinPoint": { "N": "80" }
+  }
+]

@@ -1,234 +1,94 @@
 {
-  "Customers": [
+  "Customer": [
     {
-      "CustomerID": {
-        "S": "CUST001"
-      },
-      "Name": {
-        "S": "วิกิจ บุนยะศัพท์"
-      },
-      "PasswordHash": {
-        "S": "hash_+3mKTPyf"
-      },
-      "Phone": {
-        "S": "052-781476"
-      },
-      "Email": {
-        "S": "dwngcchanthrnabenuuengn@bcchkchatrphiethiiyngkham.go.th"
-      },
-      "Points": {
-        "N": "249"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676370Z"
-      }
+      "CustomerID": { "S": "CUST006" },
+      "Name": { "S": "เนติลักษณ์ แนวพนิช" },
+      "PasswordHash": { "S": "hash_!l35r#Wv" },
+      "Phone": { "S": "0625640754" },
+      "Email": { "S": "BigmacdoublebeefpattynLfried@hotmail.com" },
+      "Points": { "N": "277" },
+      "CreatedAt": { "S": "2024-12-20" }
     },
     {
-      "CustomerID": {
-        "S": "CUST002"
-      },
-      "Name": {
-        "S": "อำไพ ธัญเสถียร"
-      },
-      "PasswordHash": {
-        "S": "hash_M_l$4Kkv"
-      },
-      "Phone": {
-        "S": "+66 680 035 258"
-      },
-      "Email": {
-        "S": "phrpraanii65@haanghunswnsaamay.net"
-      },
-      "Points": {
-        "N": "136"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676504Z"
-      }
+      "CustomerID": { "S": "CUST005" },
+      "Name": { "S": "จักรพันธ์ นับเนื่องนอ" },
+      "PasswordHash": { "S": "hash_@1q1cvKg" },
+      "Phone": { "S": "0840057273" },
+      "Email": { "S": "yakkinkaolaew@gmail.com" },
+      "Points": { "N": "265" },
+      "CreatedAt": { "S": "2025-01-10" }
     },
     {
-      "CustomerID": {
-        "S": "CUST003"
-      },
-      "Name": {
-        "S": "ฐิติกุล ไทนิยม"
-      },
-      "PasswordHash": {
-        "S": "hash_(!3BujzU"
-      },
-      "Phone": {
-        "S": "0858103744"
-      },
-      "Email": {
-        "S": "laddaathnadkaarynt@ymail.com"
-      },
-      "Points": {
-        "N": "171"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676594Z"
-      }
+      "CustomerID": { "S": "CUST009" },
+      "Name": { "S": "สหัสมณี เนื้อนุ่ม" },
+      "PasswordHash": { "S": "hash_%x03CEIz" },
+      "Phone": { "S": "029237022" },
+      "Email": { "S": "sahatmani.nn@dome.tu.ac.th" },
+      "Points": { "N": "235" },
+      "CreatedAt": { "S": "2025-02-20" }
     },
     {
-      "CustomerID": {
-        "S": "CUST004"
-      },
-      "Name": {
-        "S": "มนรัตน์ ศรีเผด็จ"
-      },
-      "PasswordHash": {
-        "S": "hash_WtW(6G3f"
-      },
-      "Phone": {
-        "S": "0 937 521 947"
-      },
-      "Email": {
-        "S": "ythuuphm@icloud.com"
-      },
-      "Points": {
-        "N": "232"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676681Z"
-      }
+      "CustomerID": { "S": "CUST004" },
+      "Name": { "S": "มนรัตน์ ศรีเผด็จ" },
+      "PasswordHash": { "S": "hash_WtW(6G3f" },
+      "Phone": { "S": "0937521947" },
+      "Email": { "S": "PinkyMicky@icloud.com" },
+      "Points": { "N": "232" },
+      "CreatedAt": { "S": "2025-03-05" }
     },
     {
-      "CustomerID": {
-        "S": "CUST005"
-      },
-      "Name": {
-        "S": "จักรพันธ์ นับเนื่องนอ"
-      },
-      "PasswordHash": {
-        "S": "hash_@1q1cvKg"
-      },
-      "Phone": {
-        "S": "+664 005 7273"
-      },
-      "Email": {
-        "S": "yekhiiywkhuy@ymail.com"
-      },
-      "Points": {
-        "N": "265"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676743Z"
-      }
+      "CustomerID": { "S": "CUST001" },
+      "Name": { "S": "วิกิจ บุนยะศัพท์" },
+      "PasswordHash": { "S": "hash_+3mKTPyf" },
+      "Phone": { "S": "0827816476" },
+      "Email": { "S": "Vikit1503@gmail.com" },
+      "Points": { "N": "249" },
+      "CreatedAt": { "S": "2025-02-01" }
     },
     {
-      "CustomerID": {
-        "S": "CUST006"
-      },
-      "Name": {
-        "S": "เนติลักษณ์ แนวพนิช"
-      },
-      "PasswordHash": {
-        "S": "hash_!l35r#Wv"
-      },
-      "Phone": {
-        "S": "+662 564 0754"
-      },
-      "Email": {
-        "S": "rchtkrthnadhatthkrrm@ngaamphiechsthphuuechphl.com"
-      },
-      "Points": {
-        "N": "277"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676842Z"
-      }
+      "CustomerID": { "S": "CUST007" },
+      "Name": { "S": "โสภณิตา ตั้งกุลงาม" },
+      "PasswordHash": { "S": "hash_(bj&u2Tp" },
+      "Phone": { "S": "0802399292" },
+      "Email": { "S": "neverwin5050inmylife@gmail.com" },
+      "Points": { "N": "181" },
+      "CreatedAt": { "S": "2025-05-10" }
     },
     {
-      "CustomerID": {
-        "S": "CUST007"
-      },
-      "Name": {
-        "S": "โสภณิตา ตั้งกุลงาม"
-      },
-      "PasswordHash": {
-        "S": "hash_(bj&u2Tp"
-      },
-      "Phone": {
-        "S": "080-239-9292"
-      },
-      "Email": {
-        "S": "buybamrungcchiiraaphrn@hsnthnadhatthkrrmkhnsng.go.th"
-      },
-      "Points": {
-        "N": "181"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676931Z"
-      }
+      "CustomerID": { "S": "CUST003" },
+      "Name": { "S": "ฐิติกุล ไทนิยม" },
+      "PasswordHash": { "S": "hash_(!3BujzU" },
+      "Phone": { "S": "0858103744" },
+      "Email": { "S": "Thitikul_Thainiyom@gmail.com" },
+      "Points": { "N": "171" },
+      "CreatedAt": { "S": "2025-05-20" }
     },
     {
-      "CustomerID": {
-        "S": "CUST008"
-      },
-      "Name": {
-        "S": "ชลิดา เมืองสุข"
-      },
-      "PasswordHash": {
-        "S": "hash_!d7D0x@h"
-      },
-      "Phone": {
-        "S": "+662 535 4536"
-      },
-      "Email": {
-        "S": "nathsakdi05@icloud.com"
-      },
-      "Points": {
-        "N": "3"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.676994Z"
-      }
+      "CustomerID": { "S": "CUST010" },
+      "Name": { "S": "ชัชนันท์ เนื่องนนท์" },
+      "PasswordHash": { "S": "hash_Rh%q1LDy" },
+      "Phone": { "S": "0971748500" },
+      "Email": { "S": "Peachmakmak@gmail.com" },
+      "Points": { "N": "145" },
+      "CreatedAt": { "S": "2025-07-15" }
     },
     {
-      "CustomerID": {
-        "S": "CUST009"
-      },
-      "Name": {
-        "S": "สหัสมณี เนื้อนุ่ม"
-      },
-      "PasswordHash": {
-        "S": "hash_%x03CEIz"
-      },
-      "Phone": {
-        "S": "0-2923-7022"
-      },
-      "Email": {
-        "S": "tantraacchinhrthay@brisath.in.th"
-      },
-      "Points": {
-        "N": "235"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677086Z"
-      }
+      "CustomerID": { "S": "CUST002" },
+      "Name": { "S": "อำไพ ธัญเสถียร" },
+      "PasswordHash": { "S": "hash_M_l$4Kkv" },
+      "Phone": { "S": "0680035258" },
+      "Email": { "S": "Pimrakcat@hotmail.com" },
+      "Points": { "N": "136" },
+      "CreatedAt": { "S": "2025-08-01" }
     },
     {
-      "CustomerID": {
-        "S": "CUST010"
-      },
-      "Name": {
-        "S": "ชัชนันท์ เนื่องนนท์"
-      },
-      "PasswordHash": {
-        "S": "hash_Rh%q1LDy"
-      },
-      "Phone": {
-        "S": "+66 7174 8500"
-      },
-      "Email": {
-        "S": "rththichkrnkthng@gmail.com"
-      },
-      "Points": {
-        "N": "145"
-      },
-      "CreatedAt": {
-        "S": "2025-09-27T13:43:48.677154Z"
-      }
+      "CustomerID": { "S": "CUST008" },
+      "Name": { "S": "ชลิดา เมืองสุข" },
+      "PasswordHash": { "S": "hash_!d7D0x@h" },
+      "Phone": { "S": "0925354536" },
+      "Email": { "S": "gachagameSUCKs@icloud.com" },
+      "Points": { "N": "3" },
+      "CreatedAt": { "S": "2025-10-01" }
     }
   ]
 }
