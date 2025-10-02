@@ -1,35 +1,35 @@
 {
   "Products": [
     {
-      "ProductID": { "S": "PROD011" },
+      "ProductID": { "S": "PROD001" },
       "Category": { "S": "อาหาร" },
       "Name": { "S": "สปาเกตตีคาโบนาร่า" },
       "Price": { "N": "150" },
       "Stock": { "N": "40" }
     },
     {
-      "ProductID": { "S": "PROD012" },
+      "ProductID": { "S": "PROD002" },
       "Category": { "S": "อาหาร" },
       "Name": { "S": "สลัดผักอโวคาโด" },
       "Price": { "N": "95" },
       "Stock": { "N": "36" }
     },
     {
-      "ProductID": { "S": "PROD013" },
+      "ProductID": { "S": "PROD003" },
       "Category": { "S": "อาหาร" },
       "Name": { "S": "แกงกะหรี่ญี่ปุ่น" },
       "Price": { "N": "140" },
       "Stock": { "N": "28" }
     },
     {
-      "ProductID": { "S": "PROD014" },
+      "ProductID": { "S": "PROD004" },
       "Category": { "S": "อาหาร" },
       "Name": { "S": "โอโคโนมิยากิ" },
       "Price": { "N": "130" },
       "Stock": { "N": "22" }
     },
     {
-      "ProductID": { "S": "PROD015" },
+      "ProductID": { "S": "PROD005" },
       "Category": { "S": "อาหาร" },
       "Name": { "S": "ข้าวผัดเบคอน" },
       "Price": { "N": "110" },
@@ -37,35 +37,35 @@
     },
 
     {
-      "ProductID": { "S": "PROD016" },
+      "ProductID": { "S": "PROD006" },
       "Category": { "S": "เครื่องดื่ม" },
       "Name": { "S": "ลาเต้ร้อน" },
       "Price": { "N": "65" },
       "Stock": { "N": "60" }
     },
     {
-      "ProductID": { "S": "PROD017" },
+      "ProductID": { "S": "PROD007" },
       "Category": { "S": "เครื่องดื่ม" },
       "Name": { "S": "ชาเขียวเย็น" },
       "Price": { "N": "55" },
       "Stock": { "N": "72" }
     },
     {
-      "ProductID": { "S": "PROD018" },
+      "ProductID": { "S": "PROD008" },
       "Category": { "S": "เครื่องดื่ม" },
       "Name": { "S": "โกโก้ปั่น" },
       "Price": { "N": "75" },
       "Stock": { "N": "54" }
     },
     {
-      "ProductID": { "S": "PROD019" },
+      "ProductID": { "S": "PROD009" },
       "Category": { "S": "เครื่องดื่ม" },
       "Name": { "S": "น้ำผึ้งมะนาวโซดา" },
       "Price": { "N": "70" },
       "Stock": { "N": "48" }
     },
     {
-      "ProductID": { "S": "PROD020" },
+      "ProductID": { "S": "PROD010" },
       "Category": { "S": "เครื่องดื่ม" },
       "Name": { "S": "ชามะลิเย็น" },
       "Price": { "N": "50" },
@@ -73,35 +73,35 @@
     },
 
     {
-      "ProductID": { "S": "PROD021" },
+      "ProductID": { "S": "PROD011" },
       "Category": { "S": "ของแมว" },
       "Name": { "S": "ทูน่ากระป๋องสำหรับแมว" },
       "Price": { "N": "45" },
       "Stock": { "N": "52" }
     },
     {
-      "ProductID": { "S": "PROD022" },
+      "ProductID": { "S": "PROD012" },
       "Category": { "S": "ของแมว" },
       "Name": { "S": "ขนมแมวเลียรสปลาโอ" },
       "Price": { "N": "25" },
       "Stock": { "N": "110" }
     },
     {
-      "ProductID": { "S": "PROD023" },
+      "ProductID": { "S": "PROD013" },
       "Category": { "S": "ของแมว" },
       "Name": { "S": "ไก่อบแห้งหั่นชิ้น" },
       "Price": { "N": "35" },
       "Stock": { "N": "68" }
     },
     {
-      "ProductID": { "S": "PROD024" },
+      "ProductID": { "S": "PROD014" },
       "Category": { "S": "ของแมว" },
       "Name": { "S": "ปลาต้มบดสำหรับแมวเด็ก" },
       "Price": { "N": "30" },
       "Stock": { "N": "75" }
     },
     {
-      "ProductID": { "S": "PROD025" },
+      "ProductID": { "S": "PROD015" },
       "Category": { "S": "ของแมว" },
       "Name": { "S": "ขนมแมวรสชีส" },
       "Price": { "N": "40" },
