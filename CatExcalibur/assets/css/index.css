@@ -1,0 +1,142 @@
+/* ===== Global ===== */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #111;
+}
+
+/* ใช้สำหรับ layout ที่ต้องการให้อยู่ตรงกลาง (เช่นหน้า Home) */
+.container.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* ===== Logo + Title ===== */
+.logo {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 28px;
+  margin: 10px 0 30px;
+}
+
+/* ===== ปุ่ม ===== */
+a {
+  text-decoration: none;
+}
+.btn {
+  display: block;
+  width: 220px;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+/* ปุ่มหลัก */
+.btn-primary {
+  background-color: #2da8ff;
+  color: white;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: #1b8fe0;
+}
+
+/* ปุ่มขอบดำ */
+.btn-outline {
+  background-color: white;
+  border: 1px solid #000;
+  color: #000;
+}
+.btn-outline:hover {
+  background-color: #f1f1f1;
+}
+
+/* ปุ่มพื้นฟ้าอ่อน */
+.btn-light {
+  background-color: #f0faff;
+  border: 1px solid #cceeff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.btn-light:hover {
+  background-color: #e2f6ff;
+}
+.icon {
+  font-size: 18px;
+}
+
+/* ===== Cart/Item (จากหน้า POS) ===== */
+.card {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+.menu-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.item {
+  width: 120px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+}
+.item img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.cart-box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fafafa;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e6e6e6;
+}
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.small {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Popup แจ้งเตือน */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #28a745;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: none;
+  z-index: 999;
+}

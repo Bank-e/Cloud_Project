@@ -1,0 +1,26 @@
+/* assets/css/style.css - shared styles */
+body{font-family:Arial, Helvetica, sans-serif;margin:0;background:#fff;color:#111}
+nav{background:#eee;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+nav .left{display:flex;align-items:center;gap:12px}
+nav a{color:#111;text-decoration:none;padding:6px 10px;border-radius:6px}
+nav a:hover{background:#ddd}
+.container{padding:24px}
+.header-title{font-size:28px;margin:8px 0}
+.row{display:flex;gap:20px}
+.col{flex:1}
+.card{background:#f7f7f7;padding:12px;border-radius:8px;border:1px solid #e0e0e0}
+.menu-grid{display:flex;flex-wrap:wrap;gap:16px}
+.item{width:120px;background:#fff;border:1px solid #ccc;border-radius:8px;padding:8px;text-align:center}
+.item img{width:100px;height:80px;object-fit:cover;border-radius:6px}
+.btn{background:#2d6cdf;color:#fff;padding:8px 12px;border:none;border-radius:8px;cursor:pointer}
+.btn.alt{background:#3db8ff}
+.cart-box{border:1px solid #ccc;border-radius:10px;padding:12px;background:#fafafa}
+.cart-item{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #e6e6e6}
+.qty-controls{display:flex;align-items:center;gap:6px}
+.small{font-size:13px;color:ฟฟ#666}
+.popup{position:fixed;top:20px;right:20px;background:#28a745;color:#fff;padding:10px 14px;border-radius:8px;display:none;z-index:999}
+.footer{margin-top:20px;padding:12px;text-align:center;color:#666}
+.form-box{max-width:500px;margin:0 auto;background:#fff;border:1px solid #e6e6e6;padding:16px;border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border:1px solid #ddd;padding:8px;text-align:left}
+@media(max-width:900px){.row{flex-direction:column}.menu-grid{justify-content:flex-start}}
