@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Prototype - POS Reservation</title>
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<nav><div class="left"><a href="#" onclick="showSection('home')">🐾 Home</a></div>
+<div><a href="#" onclick="showSection('pos')">POS</a> <a href="#" onclick="showSection('reservation')">Reservation</a> <a href="#" onclick="showSection('profile')">Profile</a>
+<span>🛒 <span id="cart-count">0</span></span></div></nav>
+
+<div class="container">
+  <div id="home" data-section><h1 class="header-title">Home Page</h1><div class="card"><p>Prototype home</p></div></div>
+  <div id="pos" data-section style="display:none"><h1 class="header-title">POS</h1>
+    <div class="row"><div class="col card">
+      <h3>Menu</h3>
+      <div class="menu-grid">
+        <div class="item"><img src="assets/img/spaghetti.jpg"><div>Spaghetti</div><div class="small">149฿</div><button class="btn" onclick="Cart.add('Spaghetti',149,'assets/img/spaghetti.jpg')">+ add</button></div>
+        <div class="item"><img src="assets/img/friedchicken.jpg"><div>Fried Chicken</div><div class="small">189฿</div><button class="btn" onclick="Cart.add('Fried Chicken',189,'assets/img/friedchicken.jpg')">+ add</button></div>
+      </div>
+    </div>
+    <div class="col card">
+      <h3>Cart</h3>
+      <div id="cart-list"></div>
+      <div id="cart-total" class="small" style="text-align:right">Total: 0฿</div>
+      <p><button class="btn" onclick="alert('Checkout demo')">Checkout</button></p>
+    </div></div>
+  </div>
+
+  <div id="reservation" data-section style="display:none"><h1 class="header-title">Reservation</h1>
+    <div class="form-box">
+      <label>Date</label><input type="date" id="rdate" style="width:100%;padding:8px;margin-bottom:8px"/>
+      <label>Time</label><input type="time" id="rtime" style="width:100%;padding:8px;margin-bottom:8px"/>
+      <label>Name</label><input type="text" id="rname" style="width:100%;padding:8px;margin-bottom:8px"/>
+      <p><button class="btn" onclick="makeReservation()">จอง</button></p>
+    </div></div>
+
+  <div id="profile" data-section style="display:none"><h1 class="header-title">Member Profile</h1><div class="card"><p>Demo member</p></div></div>
+</div>
+
+<div id="popup" class="popup"></div>
+<script src="assets/js/app.js"></script>
+<script>
+function makeReservation(){ alert('Reserved (prototype)'); showSection('home'); }
+renderCart();
+</script>
+</body></html>

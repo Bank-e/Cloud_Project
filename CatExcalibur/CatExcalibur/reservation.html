@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Reservation</title>
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<nav><div class="left"><a href="index.html">Home</a></div><div><a href="pos.html">POS</a></div></nav>
+<div class="container"><h1 class="header-title">Reservation Form</h1>
+<div class="form-box">
+  <label>Date</label><input type="date" id="rdate" style="width:100%;padding:8px;margin-bottom:8px"/>
+  <label>Time</label><input type="time" id="rtime" style="width:100%;padding:8px;margin-bottom:8px"/>
+  <label>Name</label><input type="text" id="rname" style="width:100%;padding:8px;margin-bottom:8px"/>
+  <label>Phone</label><input type="text" id="rphone" style="width:100%;padding:8px;margin-bottom:8px"/>
+  <p><button class="btn" onclick="makeReservation()">ยืนยันการจอง</button></p>
+</div></div>
+<script>
+function makeReservation(){
+  const date=document.getElementById('rdate').value;
+  const time=document.getElementById('rtime').value;
+  const name=document.getElementById('rname').value;
+  if(!date||!time||!name){ alert('กรุณากรอกข้อมูลให้ครบ'); return; }
+  localStorage.setItem('lastReservation', JSON.stringify({date,time,name,phone:document.getElementById('rphone').value}));
+  alert('จองเรียบร้อย');
+  window.location='booking_confirm.html';
+}
+</script>
+</body></html>
