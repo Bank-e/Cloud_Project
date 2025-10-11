@@ -1,79 +1,93 @@
-// assets/js/app.js - shared cart logic for POS pages
-const Cart = {
-  items: [],
-  add(name, price, img){
-    const found = this.items.find(i=>i.name===name);
-    if(found) found.qty++;
-    else this.items.push({name,price,qty:1,img});
-    this._onChange();
-    this._popup('Added: '+name);
-  },
-  changeQty(name,delta){
-    const it = this.items.find(i=>i.name===name);
-    if(!it) return;
-    it.qty += delta;
-    if(it.qty<1) this.remove(name);
-    this._onChange();
-  },
-  remove(name){
-    this.items = this.items.filter(i=>i.name!==name);
-    this._onChange();
-  },
-  total(){
-    return this.items.reduce((s,i)=>s+i.qty*i.price,0);
-  },
-  count(){
-    return this.items.reduce((s,i)=>s+i.qty,0);
-  },
-  clear(){ this.items=[]; this._onChange();},
-  _onChange(){ renderCart(); },
-  _popup(msg){
-    const el = document.getElementById('popup');
-    if(!el) return;
-    el.textContent = '✅ ' + msg;
-    el.style.display='block';
-    setTimeout(()=>el.style.display='none',1200);
-  }
-};
+// ตะกร้าสินค้า
+let cart = [];
 
-function renderCart(){
-  const cartEl = document.getElementById('cart-list');
-  const countEl = document.getElementById('cart-count');
-  const totalEl = document.getElementById('cart-total');
-  if(!cartEl) return;
-  cartEl.innerHTML='';
-  Cart.items.forEach(it=>{
-    const div = document.createElement('div');
-    div.className='cart-item';
-    div.innerHTML = `
-      <div style="display:flex;align-items:center;gap:8px">
-        <img src="${it.img}" style="width:40px;height:40px;object-fit:cover;border-radius:6px"/>
-        <div>
-          <div>${it.name}</div>
-          <div class="small">${it.price}฿ each</div>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:8px">
-        <div class="qty-controls">
-          <button class="btn" onclick="Cart.changeQty('${it.name}',-1)">-</button>
-          <div>${it.qty}</div>
-          <button class="btn alt" onclick="Cart.changeQty('${it.name}',1)">+</button>
-          <button class="btn" style="background:#e74c3c;margin-left:8px" onclick="Cart.remove('${it.name}')">🗑</button>
-        </div>
-        <div style="min-width:50px;text-align:right">${it.qty*it.price}฿</div>
-      </div>
-    `;
-    cartEl.appendChild(div);
-  });
-  countEl && (countEl.textContent = Cart.count());
-  totalEl && (totalEl.textContent = 'Total: ' + Cart.total() + '฿');
+// เพิ่มสินค้าลงตะกร้า
+function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    
+    if (existingItem) {
+        existingItem.qty++;
+    } else {
+        cart.push({ name, price, qty: 1 });
+    }
+    
+    updateCart();
 }
 
-// simple helper to navigate within prototype page
-function showSection(id){
-  document.querySelectorAll('[data-section]').forEach(s=>s.style.display='none');
-  const el = document.getElementById(id);
-  if(el) el.style.display='block';
+// อัพเดทจำนวนสินค้า
+function updateQty(index, change) {
+    cart[index].qty += change;
+    if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+    }
+    updateCart();
 }
 
-window.addEventListener('load', ()=>{ renderCart(); });
+// ลบสินค้าออกจากตะกร้า
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+// อัพเดทการแสดงผลตะกร้า
+function updateCart() {
+    const cartItemsDiv = document.getElementById('cartItems');
+    const totalPriceSpan = document.getElementById('totalPrice');
+    const cartCountSpan = document.getElementById('cartCount');
+    
+    // ถ้าตะกร้าว่าง
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<div class="empty-cart">ไม่มีสินค้าในตะกร้า</div>';
+        totalPriceSpan.textContent = '0฿';
+        cartCountSpan.textContent = '0';
+        return;
+    }
+    
+    // สร้าง HTML สำหรับสินค้าในตะกร้า
+    let html = '';
+    let total = 0;
+    let itemCount = 0;
+    
+    cart.forEach((item, index) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        itemCount += item.qty;
+        
+        html += `
+            <div class="cart-item">
+                <div class="item-info">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-price">${item.price}฿ x ${item.qty} = ${itemTotal}฿</div>
+                </div>
+                <div class="item-controls">
+                    <button class="qty-btn" onclick="updateQty(${index}, -1)">-</button>
+                    <span class="qty-number">${item.qty}</span>
+                    <button class="qty-btn" onclick="updateQty(${index}, 1)">+</button>
+                    <button class="remove-btn" onclick="removeItem(${index})">×</button>
+                </div>
+            </div>
+        `;
+    });
+    
+    cartItemsDiv.innerHTML = html;
+    totalPriceSpan.textContent = total + '฿';
+    cartCountSpan.textContent = itemCount;
+}
+
+// ไปหน้าชำระเงิน
+function checkout() {
+    if (cart.length === 0) {
+        alert('กรุณาเลือกสินค้าก่อนชำระเงิน');
+        return;
+    }
+    
+    // บันทึกข้อมูลตะกร้าใน sessionStorage (optional)
+    // sessionStorage.setItem('cart', JSON.stringify(cart));
+    
+    window.location.href = 'checkout.html';
+}
+
+// เรียกใช้เมื่อโหลดหน้าเว็บเสร็จ
+document.addEventListener('DOMContentLoaded', function() {
+    updateCart();
+});

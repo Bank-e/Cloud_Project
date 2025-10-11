@@ -1,13 +1,42 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Login</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div><div></div></nav>
-<div class="container"><h1 class="header-title">Login</h1>
-<div class="form-box">
-  <label>Username</label><input id="u" style="width:100%;padding:8px;margin-bottom:8px"/>
-  <label>Password</label><input id="p" type="password" style="width:100%;padding:8px;margin-bottom:8px"/>
-  <p><button class="btn" onclick="login()">Login</button> <a href="register.html" class="btn alt">Register</a></p>
-</div></div>
-<script>
-function login(){ alert('Demo login'); window.location='index.html'; }
-</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="login.html" class="nav-link">👤</a>
+    </div>
+
+    <div class="container">
+        <div class="card" style="text-align: center;">
+            <div class="logo" style="margin: 0 auto 30px;">🐾</div>
+            <h2 style="text-align: center; margin-bottom: 30px;">Login</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="text" class="form-input" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-input" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('เข้าสู่ระบบสำเร็จ!');
+            window.location.href = 'member_profile.html';
+        });
+    </script>
+</body>
+</html>

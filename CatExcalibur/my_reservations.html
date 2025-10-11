@@ -1,8 +1,63 @@
-<!doctype html><html><head><meta charset="utf-8"><title>My Reservations</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div></nav>
-<div class="container"><h1 class="header-title">My Reservation Page</h1>
-<div class="card"><table class="table"><tr><th>Date</th><th>Time</th><th>Qty</th><th>Status</th></tr>
-<tr><td>12/04/2025</td><td>15:30</td><td>1</td><td>Confirm</td></tr>
-<tr><td>11/04/2025</td><td>13:00</td><td>2</td><td>Cancelled</td></tr>
-</table><p><button class="btn">Confirm Reservation</button></p></div></div></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reservations - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="sales_history.html" class="nav-link">History</a>
+        <a href="login.html" class="nav-link">👤</a>
+    </div>
+
+    <div class="container-large">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo logo-small">🐾</div>
+                <h2>My Reservation Page</h2>
+            </div>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Qty</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>13/04/2025</td>
+                            <td>10:30</td>
+                            <td>1</td>
+                            <td><span class="status-badge status-confirm">Confirm</span></td>
+                        </tr>
+                        <tr>
+                            <td>11/04/2025</td>
+                            <td>13:00</td>
+                            <td>3</td>
+                            <td><span class="status-badge status-waiting">Waiting online</span></td>
+                        </tr>
+                        <tr>
+                            <td>10/04/2025</td>
+                            <td>12:50</td>
+                            <td>2</td>
+                            <td><span class="status-badge status-cancel">cancel</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <button class="btn btn-primary" onclick="window.location.href='reservation-form.html'">
+                Confirm Reservation
+            </button>
+        </div>
+    </div>
+</body>
+</html>

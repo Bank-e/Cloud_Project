@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <title>Cat Excalibur - Home</title>
-  <link rel="stylesheet" href="assets/css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Excalibur - Home</title>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-  <div class="container home">
-    <div class="logo">🐾</div>
-    <h1>Cat Excalibur</h1>
+    <div class="container">
+        <div class="card">
+            <div class="logo">🐾</div>
+            <h1>Cat Excalibur</h1>
+            
+            <button class="btn btn-primary" onclick="goToRegister()">ลงทะเบียน</button>
+            <button class="btn btn-secondary" onclick="goToLogin()">เข้าสู่ระบบ/สมัครสมาชิก</button>
+            
+            <a href="#" class="skip-link" onclick="goToMenu()">                
+                <span>Reward&Promotion</span>
+            </a>
+        </div>
+    </div>
 
-    <a href="reservation.html" class="btn btn-primary">จองคิว</a>
-    <a href="login.html" class="btn btn-outline">เข้าสู่ระบบ/สมัครสมาชิก</a>
-    <a href="reward.html" class="btn btn-light">
-      <span class="icon">⭐</span> โปรโมชั่น
-    </a>
-  </div>
+    <script>
+        function goToRegister() {
+            window.location.href = 'register.html';
+        }
+
+        function goToLogin() {
+            window.location.href = 'login.html';
+        }
+
+    </script>
 </body>
 </html>

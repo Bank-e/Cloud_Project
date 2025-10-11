@@ -1,5 +1,70 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Rewards & Promotion</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div></nav>
-<div class="container"><h1 class="header-title">Rewards & Promotions</h1>
-<div class="card"><p>Redeem rewards here (demo)</p><p><button class="btn">Redeem Rewards</button></p></div></div></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards & Promotion - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="sales_history.html" class="nav-link">History</a>
+        <a href="member_profile.html" class="nav-link">👤</a>
+    </div>
+
+    <div class="container-large">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo logo-small">🐾</div>
+                <h2>Rewards & Promotions</h2>
+            </div>
+            
+            <div class="rewards-grid">
+                <div class="reward-item" style="background: #b3e5fc;" onclick="selectReward('ส่วนลด 10%')">
+                    <div class="reward-icon">🎁</div>
+                    <div class="reward-name">ส่วนลด 10%</div>
+                    <div class="reward-type">Voucher</div>
+                </div>
+                
+                <div class="reward-item" style="background: #80deea;" onclick="selectReward('ส่วนลด 25%')">
+                    <div class="reward-icon">🎁</div>
+                    <div class="reward-name">ส่วนลด 25%</div>
+                    <div class="reward-type">Voucher</div>
+                </div>
+                
+                <div class="reward-item" style="background: #26c6da;" onclick="selectReward('ส่วนลด 35%')">
+                    <div class="reward-icon">🎁</div>
+                    <div class="reward-name">ส่วนลด 35%</div>
+                    <div class="reward-type">Voucher</div>
+                </div>
+                
+                <div class="reward-item" style="background: #4fc3f7;" onclick="selectReward('ส่วนลด 50%')">
+                    <div class="reward-icon">🎁</div>
+                    <div class="reward-name">ส่วนลด 50%</div>
+                    <div class="reward-type">Voucher</div>
+                </div>
+                
+                <div class="reward-item" style="background: #80cbc4;" onclick="selectReward('ฟรี 1 ที่')">
+                    <div class="reward-icon">🎫</div>
+                    <div class="reward-name">ฟรี 1 ที่</div>
+                    <div class="reward-type">Ticket</div>
+                </div>
+                
+                <div class="reward-item" style="background: #f8bbd0;" onclick="selectReward('ฟรี 1 เค้ก')">
+                    <div class="reward-icon">🍰</div>
+                    <div class="reward-name">ฟรี 1 เค้ก</div>
+                    <div class="reward-type">Food</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectReward(rewardName) {
+            alert('คุณเลือกรางวัล: ' + rewardName);
+        }
+    </script>
+</body>
+</html>

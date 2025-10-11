@@ -1,37 +1,110 @@
-<!doctype html><html><head><meta charset="utf-8"><title>POS - Menu</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">🐾Home</a></div>
-<div><a href="reservation.html">Booking</a> <a href="sales_history.html">History</a> <span>🛒 <span id="cart-count">0</span></span></div></nav>
-<div class="container row">
-  <div class="col">
-    <h1 class="header-title">🐾 Menu</h1>
-    <div class="card">
-      <h3>🍔 Food</h3>
-      <div class="menu-grid">
-        <div class="item"><img src="assets/img/spaghetti.jpg"><div>Spaghetti</div><div class="small">149฿</div><button class="btn" onclick="Cart.add('Spaghetti',149,'assets/img/spaghetti.jpg')">+ add to cart</button></div>
-        <div class="item"><img src="assets/img/friedchicken.jpg"><div>Fried Chicken</div><div class="small">189฿</div><button class="btn" onclick="Cart.add('Fried Chicken',189,'assets/img/friedchicken.jpg')">+ add to cart</button></div>
-      </div>
-      <h3>🥤 Drink</h3>
-      <div class="menu-grid">
-        <div class="item"><img src="assets/img/water.jpg"><div>Water</div><div class="small">20฿</div><button class="btn" onclick="Cart.add('Water',20,'assets/img/water.jpg')">+ add to cart</button></div>
-        <div class="item"><img src="assets/img/cocacola.jpg"><div>Coca Cola</div><div class="small">30฿</div><button class="btn" onclick="Cart.add('Coca Cola',30,'assets/img/cocacola.jpg')">+ add to cart</button></div>
-      </div>
-      <h3>🐾 Cat Snack</h3>
-      <div class="menu-grid">
-        <div class="item"><img src="assets/img/creamy.jpg"><div>Creamy Treats</div><div class="small">10฿</div><button class="btn" onclick="Cart.add('Creamy Treats',10,'assets/img/creamy.jpg')">+ add to cart</button></div>
-        <div class="item"><div>Coming soon</div></div>
-      </div>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/pos.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <span>🐾</span>
+            <span>Home</span>
+        </div>
+        <div class="nav-right">
+            <a href="reservation.html" class="nav-link">Booking</a>
+            <a href="sales_history.html" class="nav-link">History</a>
+            <div class="cart-badge">
+                <span>🛒</span>
+                <span id="cartCount">0</span>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="col">
-    <h1 class="header-title">Cart</h1>
-    <div class="card cart-box">
-      <div id="cart-list"></div>
-      <div id="cart-total" class="small" style="text-align:right;margin-top:8px">Total: 0฿</div>
-      <p><a class="btn" href="checkout.html">Checkout</a></p>
+
+    <div class="container">
+        <div class="menu-section">
+            <div class="category">
+                <div class="category-title">
+                    <span>🍔</span>
+                    <span>Food</span>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" onclick="addToCart('Spaghetti', 149)">
+                        <img src="assets/img/spaghetti.jpg" class="product-image">
+                        <div class="product-name">Spaghetti</div>
+                        <div class="product-price">149฿</div>
+                        <button class="add-btn">+ add to cart</button>
+                    </div>
+                    <div class="product-card" onclick="addToCart('Fried Chicken', 189)">
+                        <img src="assets/img/friedchicken.jpg" class="product-image">
+                        <div class="product-name">Fried Chicken</div>
+                        <div class="product-price">189฿</div>
+                        <button class="add-btn">+ add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>🥤</span>
+                    <span>Drink</span>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" onclick="addToCart('Water', 20)">
+                        <img src="assets/img/water.jpg" class="product-image">
+                        <div class="product-name">Water</div>
+                        <div class="product-price">20฿</div>
+                        <button class="add-btn">+ add to cart</button>
+                    </div>
+                    <div class="product-card" onclick="addToCart('Coca Cola', 30)">
+                        <img src="assets/img/cocacola.jpg" class="product-image">
+                        <div class="product-name">Coca Cola</div>
+                        <div class="product-price">30฿</div>
+                        <button class="add-btn">+ add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-title">
+                    <span>🐾</span>
+                    <span>Cat Snack</span>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card" onclick="addToCart('Creamy Treats', 10)">
+                        <img src="assets/img/creamy.jpg" class="product-image">
+                        <div class="product-name">Creamy Treats</div>
+                        <div class="product-price">10฿</div>
+                        <button class="add-btn">+ add to cart</button>
+                    </div>
+                    <div class="product-card coming-soon">
+                        <img src="https://via.placeholder.com/80/D3D3D3/000000?text=?" class="product-image">
+                        <div class="product-name">Coming soon</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <div class="cart-header">
+                <div class="cart-title">Cart</div>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">ไม่มีสินค้าในตะกร้า</div>
+            </div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total</span>
+                    <span id="totalPrice">0฿</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div id="popup" class="popup"></div>
-<script src="assets/js/app.js"></script>
-</body></html>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

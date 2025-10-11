@@ -1,26 +1,84 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Checkout</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div><div><a href="pos.html">POS</a></div></nav>
-<div class="container"><h1 class="header-title">Checkout</h1>
-<div class="card">
-  <div id="checkout-summary">
-    <h3>Order Summary</h3>
-    <div id="cart-list"></div>
-    <div id="cart-total" class="small" style="text-align:right">Total: 0฿</div>
-    <div style="margin-top:12px">
-      <button class="btn" onclick="confirmPayment()">Confirm Payment</button>
-      <button class="btn" style="background:#6c757d" onclick="Cart.clear()">Cancel</button>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="sales_history.html" class="nav-link">History</a>
+        <a href="member_profile.html" class="nav-link">👤</a>
     </div>
-  </div>
-</div></div>
-<div id="popup" class="popup"></div>
-<script src="assets/js/app.js"></script>
-<script>
-function confirmPayment(){
-  alert('Payment confirmed. Total: ' + Cart.total() + '฿');
-  Cart.clear();
-  window.location='index.html';
-}
-renderCart();
-</script>
-</body></html>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo logo-small">🐾</div>
+                <h2>Checkout</h2>
+            </div>
+            
+            <div class="checkout-summary">
+                <div class="total-row">
+                    <span>Total</span>
+                    <span>329.00</span>
+                </div>
+                
+                <div class="item-row">
+                    <span>1 Fried chicken</span>
+                    <span>฿189.00</span>
+                </div>
+                <div class="item-row">
+                    <span>1 cola (M)</span>
+                    <span>฿50.00</span>
+                </div>
+                <div class="item-row">
+                    <span>1 creamy fresh</span>
+                    <span>฿90.00</span>
+                </div>
+            </div>
+            
+            <div class="payment-grid">
+                <button class="payment-btn" onclick="selectPayment('Cash')">Cash</button>
+                <button class="payment-btn" onclick="selectPayment('PromptPay')">PromptPay</button>
+                <button class="payment-btn full-width" onclick="selectPayment('Credit')">Credit</button>
+            </div>
+            
+            <button class="btn btn-primary" onclick="confirmPayment()">
+                Confirm Payment
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedPayment = '';
+        
+        function selectPayment(method) {
+            selectedPayment = method;
+            // Highlight selected payment
+            const buttons = document.querySelectorAll('.payment-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent === method) {
+                    btn.style.background = '#26c6da';
+                    btn.style.color = 'white';
+                } else {
+                    btn.style.background = 'white';
+                    btn.style.color = '#26c6da';
+                }
+            });
+        }
+        
+        function confirmPayment() {
+            if (selectedPayment) {
+                alert('ชำระเงินสำเร็จด้วย ' + selectedPayment + '!');
+                window.location.href = 'sales_history.html';
+            } else {
+                alert('กรุณาเลือกวิธีการชำระเงิน');
+            }
+        }
+    </script>
+</body>
+</html>

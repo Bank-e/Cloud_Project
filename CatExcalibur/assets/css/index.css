@@ -1,142 +1,98 @@
-/* ===== Global ===== */
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  background: #fff;
-  color: #111;
-}
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* ใช้สำหรับ layout ที่ต้องการให้อยู่ตรงกลาง (เช่นหน้า Home) */
-.container.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
 
-/* ===== Logo + Title ===== */
-.logo {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-h1 {
-  font-size: 28px;
-  margin: 10px 0 30px;
-}
+        .container {
+            max-width: 400px;
+            width: 100%;
+        }
 
-/* ===== ปุ่ม ===== */
-a {
-  text-decoration: none;
-}
-.btn {
-  display: block;
-  width: 220px;
-  padding: 12px;
-  margin: 10px auto;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-}
+        .card {
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 50px 40px;
+            text-align: center;
+        }
 
-/* ปุ่มหลัก */
-.btn-primary {
-  background-color: #2da8ff;
-  color: white;
-  font-weight: bold;
-}
-.btn-primary:hover {
-  background-color: #1b8fe0;
-}
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #000;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
 
-/* ปุ่มขอบดำ */
-.btn-outline {
-  background-color: white;
-  border: 1px solid #000;
-  color: #000;
-}
-.btn-outline:hover {
-  background-color: #f1f1f1;
-}
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
 
-/* ปุ่มพื้นฟ้าอ่อน */
-.btn-light {
-  background-color: #f0faff;
-  border: 1px solid #cceeff;
-  color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-.btn-light:hover {
-  background-color: #e2f6ff;
-}
-.icon {
-  font-size: 18px;
-}
+        .btn {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
 
-/* ===== Cart/Item (จากหน้า POS) ===== */
-.card {
-  background: #f7f7f7;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-}
-.menu-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.item {
-  width: 120px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 8px;
-  text-align: center;
-}
-.item img {
-  width: 100px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.cart-box {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 12px;
-  background: #fafafa;
-}
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 6px 0;
-  border-bottom: 1px dashed #e6e6e6;
-}
-.qty-controls {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.small {
-  font-size: 13px;
-  color: #666;
-}
+        .btn-primary {
+            background: #26c6da;
+            color: white;
+        }
 
-/* Popup แจ้งเตือน */
-.popup {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #28a745;
-  color: #fff;
-  padding: 10px 14px;
-  border-radius: 8px;
-  display: none;
-  z-index: 999;
-}
+        .btn-primary:hover {
+            background: #00acc1;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(38, 198, 218, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #333;
+            border: 2px solid #ddd;
+        }
+
+        .btn-secondary:hover {
+            border-color: #26c6da;
+            color: #26c6da;
+            transform: translateY(-2px);
+        }
+
+        .skip-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #999;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .skip-link:hover {
+            color: #26c6da;
+        }

@@ -1,20 +1,64 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Booking Confirm</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div><div><a href="reservation.html">Reservation</a></div></nav>
-<div class="container"><h1 class="header-title">Booking Confirmation</h1>
-<div class="card" id="confirm-box">
-  <p>Loading confirmation...</p>
-</div></div>
-<script>
-const data = JSON.parse(localStorage.getItem('lastReservation')||'null');
-const el = document.getElementById('confirm-box');
-if(data){
-  el.innerHTML = `<p><strong>Name:</strong> ${data.name}</p>
-  <p><strong>Date:</strong> ${data.date} ${data.time}</p>
-  <p><strong>Phone:</strong> ${data.phone||'-'}</p>
-  <p>Booking ID: B-` + Math.floor(Math.random()*900+100) + `</p>`;
-} else {
-  el.innerHTML = '<p>No booking found.</p>';
-}
-</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="sales_history.html" class="nav-link">History</a>
+        <a href="login.html" class="nav-link">👤</a>
+    </div>
+
+    <div class="container">
+        <div class="card" style="text-align: center;">
+            <div class="logo" style="margin: 0 auto 30px;">🐾</div>
+            <h2 style="text-align: center; margin-bottom: 30px;">ยืนยันการจอง</h2>
+            
+            <div class="info-group">
+                <div class="info-row">
+                    <span class="info-label">หมายเลขการจอง:</span>
+                    <span class="info-value">RE8749202023</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">วันที่</span>
+                    <span class="info-value">08 / 08 / 2025</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">เวลา</span>
+                    <span class="info-value">12:00</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">จำนวน</span>
+                    <span class="info-value">2 ที่นั่ง</span>
+                </div>
+            </div>
+            
+            <div class="qr-code">
+                <div class="qr-placeholder"></div>
+            </div>
+            
+            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Booking ID</p>
+            
+            <button class="btn btn-outline" style="margin-bottom: 15px;" onclick="window.location.href='reservation.html'">
+                แก้ไขข้อมูลการจอง
+            </button>
+            
+            <button class="btn btn-primary" onclick="confirmBooking()">
+                ยืนยันการจอง
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function confirmBooking() {
+            alert('ยืนยันการจองสำเร็จ!');
+            window.location.href = 'menu.html';
+        }
+    </script>
+</body>
+</html>

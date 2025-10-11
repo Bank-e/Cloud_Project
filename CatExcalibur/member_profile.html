@@ -1,6 +1,45 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Member Profile</title>
-<link rel="stylesheet" href="assets/css/style.css"></head><body>
-<nav><div class="left"><a href="index.html">Home</a></div></nav>
-<div class="container"><h1 class="header-title">Member Profile</h1>
-<div class="card"><p><strong>Sarah Sah</strong><br/>Member ID: 123456789<br/><br/>Points: 1500<br/>Membership: Silver</p>
-<p><button class="btn">View Points Payment</button></p></div></div></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile - Cat Excalibur</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="sales_history.html" class="nav-link">History</a>
+        <a href="member_profile.html" class="nav-link">👤</a>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo logo-small">🐾</div>
+                <h2>Member Profile</h2>
+            </div>
+            
+            <div class="profile-avatar">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </div>
+            
+            <div class="profile-name">Sarah Sah</div>
+            <div class="profile-id">Member ID: 123456789</div>
+            
+            <div class="points-box">
+                <span class="points-label">Points</span>
+                <span class="points-value">1500</span>
+            </div>
+            
+            <button class="btn btn-primary" onclick="window.location.href='reward.html'">
+                View Points Payment
+            </button>
+        </div>
+    </div>
+</body>
+</html>
