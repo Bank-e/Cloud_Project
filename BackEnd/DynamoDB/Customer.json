@@ -1,84 +1,84 @@
 {
   "Customer": [
     {
-      "CustomerID": "CUST006",
-      "Username": "เนติลักษณ์ แนวพนิช",
-      "Password": "Nettiluk@01",
-      "PhoneNumber": "0625640754",
-      "Email": "BigmacdoublebeefpattynLfried@hotmail.com",
-      "Points": "277"
+      "CustomerID": { "S": "CUST006" },
+      "Username": { "S": "เนติลักษณ์ แนวพนิช" },
+      "Password": { "S": "Nettiluk@01" },
+      "PhoneNumber": { "S": "0625640754" },
+      "Email": { "S": "BigmacdoublebeefpattynLfried@hotmail.com" },
+      "Points": { "N": "277" }
     },
     {
-      "CustomerID": "CUST005",
-      "Username": "จักรพันธ์ นับเนื่องนอ",
-      "Password": "Jakkapan@02",
-      "PhoneNumber": "0840057273",
-      "Email": "yakkinkaolaew@gmail.com",
-      "Points": "265"
+      "CustomerID": { "S": "CUST005" },
+      "Username": { "S": "จักรพันธ์ นับเนื่องนอ" },
+      "Password": { "S": "Jakkapan@02" },
+      "PhoneNumber": { "S": "0840057273" },
+      "Email": { "S": "yakkinkaolaew@gmail.com" },
+      "Points": { "N": "265" }
     },
     {
-      "CustomerID": "CUST009",
-      "Username": "สหัสมณี เนื้อนุ่ม",
-      "Password": "Sahatsamanee@03",
-      "PhoneNumber": "029237022",
-      "Email": "sahatmani.nn@dome.tu.ac.th",
-      "Points": "235"
+      "CustomerID": { "S": "CUST009" },
+      "Username": { "S": "สหัสมณี เนื้อนุ่ม" },
+      "Password": { "S": "Sahatsamanee@03" },
+      "PhoneNumber": { "S": "029237022" },
+      "Email": { "S": "sahatmani.nn@dome.tu.ac.th" },
+      "Points": { "N": "235" }
     },
     {
-      "CustomerID": "CUST004",
-      "Username": "มนรัตน์ ศรีเผด็จ",
-      "Password": "Monrat@04",
-      "PhoneNumber": "0937521947",
-      "Email": "PinkyMicky@icloud.com",
-      "Points": "232"
+      "CustomerID": { "S": "CUST004" },
+      "Username": { "S": "มนรัตน์ ศรีเผด็จ" },
+      "Password": { "S": "Monrat@04" },
+      "PhoneNumber": { "S": "0937521947" },
+      "Email": { "S": "PinkyMicky@icloud.com" },
+      "Points": { "N": "232" }
     },
     {
-      "CustomerID": "CUST001",
-      "Username": "วิกิจ บุนยะศัพท์",
-      "Password": "Vikit@05",
-      "PhoneNumber": "0827816476",
-      "Email": "Vikit1503@gmail.com",
-      "Points": "249"
+      "CustomerID": { "S": "CUST001" },
+      "Username": { "S": "วิกิจ บุนยะศัพท์" },
+      "Password": { "S": "Vikit@05" },
+      "PhoneNumber": { "S": "0827816476" },
+      "Email": { "S": "Vikit1503@gmail.com" },
+      "Points": { "N": "249" }
     },
     {
-      "CustomerID": "CUST007",
-      "Username": "โสภณิตา ตั้งกุลงาม",
-      "Password": "Sopanita@06",
-      "PhoneNumber": "0802399292",
-      "Email": "neverwin5050inmylife@gmail.com",
-      "Points": "181"
+      "CustomerID": { "S": "CUST007" },
+      "Username": { "S": "โสภณิตา ตั้งกุลงาม" },
+      "Password": { "S": "Sopanita@06" },
+      "PhoneNumber": { "S": "0802399292" },
+      "Email": { "S": "neverwin5050inmylife@gmail.com" },
+      "Points": { "N": "181" }
     },
     {
-      "CustomerID": "CUST003",
-      "Username": "ฐิติกุล ไทนิยม",
-      "Password": "Thitikul@07",
-      "PhoneNumber": "0858103744",
-      "Email": "Thitikul_Thainiyom@gmail.com",
-      "Points": "171"
+      "CustomerID": { "S": "CUST003" },
+      "Username": { "S": "ฐิติกุล ไทนิยม" },
+      "Password": { "S": "Thitikul@07" },
+      "PhoneNumber": { "S": "0858103744" },
+      "Email": { "S": "Thitikul_Thainiyom@gmail.com" },
+      "Points": { "N": "171" }
     },
     {
-      "CustomerID": "CUST010",
-      "Username": "ชัชนันท์ เนื่องนนท์",
-      "Password": "Chatchanan@08",
-      "PhoneNumber": "0971748500",
-      "Email": "Peachmakmak@gmail.com",
-      "Points": "145"
+      "CustomerID": { "S": "CUST010" },
+      "Username": { "S": "ชัชนันท์ เนื่องนนท์" },
+      "Password": { "S": "Chatchanan@08" },
+      "PhoneNumber": { "S": "0971748500" },
+      "Email": { "S": "Peachmakmak@gmail.com" },
+      "Points": { "N": "145" }
     },
     {
-      "CustomerID": "CUST002",
-      "Username": "อำไพ ธัญเสถียร",
-      "Password": "Ampai@09",
-      "PhoneNumber": "0680035258",
-      "Email": "Pimrakcat@hotmail.com",
-      "Points": "136"
+      "CustomerID": { "S": "CUST002" },
+      "Username": { "S": "อำไพ ธัญเสถียร" },
+      "Password": { "S": "Ampai@09" },
+      "PhoneNumber": { "S": "0680035258" },
+      "Email": { "S": "Pimrakcat@hotmail.com" },
+      "Points": { "N": "136" }
     },
     {
-      "CustomerID": "CUST008",
-      "Username": "ชลิดา เมืองสุข",
-      "Password": "Chalida@10",
-      "PhoneNumber": "0925354536",
-      "Email": "gachagameSUCKs@icloud.com",
-      "Points": "3"
+      "CustomerID": { "S": "CUST008" },
+      "Username": { "S": "ชลิดา เมืองสุข" },
+      "Password": { "S": "Chalida@10" },
+      "PhoneNumber": { "S": "0925354536" },
+      "Email": { "S": "gachagameSUCKs@icloud.com" },
+      "Points": { "N": "3" }
     }
   ]
 }

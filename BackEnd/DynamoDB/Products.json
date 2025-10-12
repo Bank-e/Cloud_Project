@@ -1,124 +1,124 @@
 {
   "Products": [
     {
-      "ProductID": "PROD001",
-      "Category": "อาหาร",
-      "ProductName": "สปาเกตตีคาโบนาร่า",
-      "ProductPrice": "150",
-      "Stock": "40",
-      "Picture_Name": "spaghetti_carbonara"
+      "ProductID": { "S": "PROD001" },
+      "Category": { "S": "อาหาร" },
+      "ProductName": { "S": "สปาเกตตีคาโบนาร่า" },
+      "ProductPrice": { "N": "150" },
+      "Stock": { "N": "40" },
+      "Picture_Name": { "S": "spaghetti_carbonara" }
     },
     {
-      "ProductID": "PROD002",
-      "Category": "อาหาร",
-      "ProductName": "สลัดผักอโวคาโด",
-      "ProductPrice": "95",
-      "Stock": "36",
-      "Picture_Name": "avocado_salad"
+      "ProductID": { "S": "PROD002" },
+      "Category": { "S": "อาหาร" },
+      "ProductName": { "S": "สลัดผักอโวคาโด" },
+      "ProductPrice": { "N": "95" },
+      "Stock": { "N": "36" },
+      "Picture_Name": { "S": "avocado_salad" }
     },
     {
-      "ProductID": "PROD003",
-      "Category": "อาหาร",
-      "ProductName": "แกงกะหรี่ญี่ปุ่น",
-      "ProductPrice": "140",
-      "Stock": "28",
-      "Picture_Name": "japanese_curry"
+      "ProductID": { "S": "PROD003" },
+      "Category": { "S": "อาหาร" },
+      "ProductName": { "S": "แกงกะหรี่ญี่ปุ่น" },
+      "ProductPrice": { "N": "140" },
+      "Stock": { "N": "28" },
+      "Picture_Name": { "S": "japanese_curry" }
     },
     {
-      "ProductID": "PROD004",
-      "Category": "อาหาร",
-      "ProductName": "โอโคโนมิยากิ",
-      "ProductPrice": "130",
-      "Stock": "22",
-      "Picture_Name": "okonomiyaki"
+      "ProductID": { "S": "PROD004" },
+      "Category": { "S": "อาหาร" },
+      "ProductName": { "S": "โอโคโนมิยากิ" },
+      "ProductPrice": { "N": "130" },
+      "Stock": { "N": "22" },
+      "Picture_Name": { "S": "okonomiyaki" }
     },
     {
-      "ProductID": "PROD005",
-      "Category": "อาหาร",
-      "ProductName": "ข้าวผัดเบคอน",
-      "ProductPrice": "110",
-      "Stock": "47",
-      "Picture_Name": "bacon_fried_rice"
+      "ProductID": { "S": "PROD005" },
+      "Category": { "S": "อาหาร" },
+      "ProductName": { "S": "ข้าวผัดเบคอน" },
+      "ProductPrice": { "N": "110" },
+      "Stock": { "N": "47" },
+      "Picture_Name": { "S": "bacon_fried_rice" }
     },
     {
-      "ProductID": "PROD006",
-      "Category": "เครื่องดื่ม",
-      "ProductName": "ลาเต้ร้อน",
-      "ProductPrice": "65",
-      "Stock": "60",
-      "Picture_Name": "hot_latte"
+      "ProductID": { "S": "PROD006" },
+      "Category": { "S": "เครื่องดื่ม" },
+      "ProductName": { "S": "ลาเต้ร้อน" },
+      "ProductPrice": { "N": "65" },
+      "Stock": { "N": "60" },
+      "Picture_Name": { "S": "hot_latte" }
     },
     {
-      "ProductID": "PROD007",
-      "Category": "เครื่องดื่ม",
-      "ProductName": "ชาเขียวเย็น",
-      "ProductPrice": "55",
-      "Stock": "72",
-      "Picture_Name": "iced_green_tea"
+      "ProductID": { "S": "PROD007" },
+      "Category": { "S": "เครื่องดื่ม" },
+      "ProductName": { "S": "ชาเขียวเย็น" },
+      "ProductPrice": { "N": "55" },
+      "Stock": { "N": "72" },
+      "Picture_Name": { "S": "iced_green_tea" }
     },
     {
-      "ProductID": "PROD008",
-      "Category": "เครื่องดื่ม",
-      "ProductName": "โกโก้ปั่น",
-      "ProductPrice": "75",
-      "Stock": "54",
-      "Picture_Name": "cocoa_frappe"
+      "ProductID": { "S": "PROD008" },
+      "Category": { "S": "เครื่องดื่ม" },
+      "ProductName": { "S": "โกโก้ปั่น" },
+      "ProductPrice": { "N": "75" },
+      "Stock": { "N": "54" },
+      "Picture_Name": { "S": "cocoa_frappe" }
     },
     {
-      "ProductID": "PROD009",
-      "Category": "เครื่องดื่ม",
-      "ProductName": "น้ำผึ้งมะนาวโซดา",
-      "ProductPrice": "70",
-      "Stock": "48",
-      "Picture_Name": "honey_lemon_soda"
+      "ProductID": { "S": "PROD009" },
+      "Category": { "S": "เครื่องดื่ม" },
+      "ProductName": { "S": "น้ำผึ้งมะนาวโซดา" },
+      "ProductPrice": { "N": "70" },
+      "Stock": { "N": "48" },
+      "Picture_Name": { "S": "honey_lemon_soda" }
     },
     {
-      "ProductID": "PROD010",
-      "Category": "เครื่องดื่ม",
-      "ProductName": "ชามะลิเย็น",
-      "ProductPrice": "50",
-      "Stock": "63",
-      "Picture_Name": "iced_jasmine_tea"
+      "ProductID": { "S": "PROD010" },
+      "Category": { "S": "เครื่องดื่ม" },
+      "ProductName": { "S": "ชามะลิเย็น" },
+      "ProductPrice": { "N": "50" },
+      "Stock": { "N": "63" },
+      "Picture_Name": { "S": "iced_jasmine_tea" }
     },
     {
-      "ProductID": "PROD011",
-      "Category": "ของแมว",
-      "ProductName": "ทูน่ากระป๋องสำหรับแมว",
-      "ProductPrice": "45",
-      "Stock": "52",
-      "Picture_Name": "canned_tuna_for_cats"
+      "ProductID": { "S": "PROD011" },
+      "Category": { "S": "ของแมว" },
+      "ProductName": { "S": "ทูน่ากระป๋องสำหรับแมว" },
+      "ProductPrice": { "N": "45" },
+      "Stock": { "N": "52" },
+      "Picture_Name": { "S": "canned_tuna_for_cats" }
     },
     {
-      "ProductID": "PROD012",
-      "Category": "ของแมว",
-      "ProductName": "ขนมแมวเลียรสปลาโอ",
-      "ProductPrice": "25",
-      "Stock": "110",
-      "Picture_Name": "tuna_cat_snack"
+      "ProductID": { "S": "PROD012" },
+      "Category": { "S": "ของแมว" },
+      "ProductName": { "S": "ขนมแมวเลียรสปลาโอ" },
+      "ProductPrice": { "N": "25" },
+      "Stock": { "N": "110" },
+      "Picture_Name": { "S": "tuna_cat_snack" }
     },
     {
-      "ProductID": "PROD013",
-      "Category": "ของแมว",
-      "ProductName": "ไก่อบแห้งหั่นชิ้น",
-      "ProductPrice": "35",
-      "Stock": "68",
-      "Picture_Name": "dried_chicken_chunks"
+      "ProductID": { "S": "PROD013" },
+      "Category": { "S": "ของแมว" },
+      "ProductName": { "S": "ไก่อบแห้งหั่นชิ้น" },
+      "ProductPrice": { "N": "35" },
+      "Stock": { "N": "68" },
+      "Picture_Name": { "S": "dried_chicken_chunks" }
     },
     {
-      "ProductID": "PROD014",
-      "Category": "ของแมว",
-      "ProductName": "ปลาต้มบดสำหรับแมวเด็ก",
-      "ProductPrice": "30",
-      "Stock": "75",
-      "Picture_Name": "mashed_fish_for_kittens"
+      "ProductID": { "S": "PROD014" },
+      "Category": { "S": "ของแมว" },
+      "ProductName": { "S": "ปลาต้มบดสำหรับแมวเด็ก" },
+      "ProductPrice": { "N": "30" },
+      "Stock": { "N": "75" },
+      "Picture_Name": { "S": "mashed_fish_for_kittens" }
     },
     {
-      "ProductID": "PROD015",
-      "Category": "ของแมว",
-      "ProductName": "ขนมแมวรสชีส",
-      "ProductPrice": "40",
-      "Stock": "60",
-      "Picture_Name": "cheese_flavored_cat_treats"
+      "ProductID": { "S": "PROD015" },
+      "Category": { "S": "ของแมว" },
+      "ProductName": { "S": "ขนมแมวรสชีส" },
+      "ProductPrice": { "N": "40" },
+      "Stock": { "N": "60" },
+      "Picture_Name": { "S": "cheese_flavored_cat_treats" }
     }
   ]
 }
