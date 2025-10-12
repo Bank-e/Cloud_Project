@@ -1,349 +1,124 @@
 {
   "Reservations": [
     {
-      "ReservationID": {
-        "S": "RES001"
-      },
-      "CustomerID": {
-        "S": "CUST008"
-      },
-      "Name": {
-        "S": "พรชนก นิษประปัญจ์"
-      },
-      "Date": {
-        "S": "2025-10-04"
-      },
-      "Time": {
-        "S": "13:00"
-      },
-      "NumberOfGuests": {
-        "N": "4"
-      },
-      "Status": {
-        "S": "cancelled"
-      }
+      "ReservationID": "RES001",
+      "CustomerID": "CUST008",
+      "Date": "2025-10-04",
+      "Time": "13:00",
+      "NumberOfGuests": "4",
+      "Status": "cancelled"
     },
     {
-      "ReservationID": {
-        "S": "RES002"
-      },
-      "CustomerID": {
-        "S": "CUST007"
-      },
-      "Name": {
-        "S": "ปัณณวัชร ทวนไชย์"
-      },
-      "Date": {
-        "S": "2025-10-21"
-      },
-      "Time": {
-        "S": "17:00"
-      },
-      "NumberOfGuests": {
-        "N": "3"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES002",
+      "CustomerID": "CUST007",
+      "Date": "2025-10-21",
+      "Time": "17:00",
+      "NumberOfGuests": "3",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES003"
-      },
-      "CustomerID": {
-        "S": "CUST006"
-      },
-      "Name": {
-        "S": "ธนวันต์ ทองเนื้อดี"
-      },
-      "Date": {
-        "S": "2025-09-30"
-      },
-      "Time": {
-        "S": "20:00"
-      },
-      "NumberOfGuests": {
-        "N": "3"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES003",
+      "CustomerID": "CUST006",
+      "Date": "2025-09-30",
+      "Time": "20:00",
+      "NumberOfGuests": "3",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES004"
-      },
-      "CustomerID": {
-        "S": "CUST009"
-      },
-      "Name": {
-        "S": "ฉลองชัย ราชมณี"
-      },
-      "Date": {
-        "S": "2025-10-23"
-      },
-      "Time": {
-        "S": "19:00"
-      },
-      "NumberOfGuests": {
-        "N": "1"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES004",
+      "CustomerID": "CUST009",
+      "Date": "2025-10-23",
+      "Time": "19:00",
+      "NumberOfGuests": "1",
+      "Status": "confirmed"
     },
     {
-      "ReservationID": {
-        "S": "RES005"
-      },
-      "CustomerID": {
-        "S": "CUST002"
-      },
-      "Name": {
-        "S": "เทพณรงค์ สังข์กรด"
-      },
-      "Date": {
-        "S": "2025-10-23"
-      },
-      "Time": {
-        "S": "13:00"
-      },
-      "NumberOfGuests": {
-        "N": "4"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES005",
+      "CustomerID": "CUST002",
+      "Date": "2025-10-23",
+      "Time": "13:00",
+      "NumberOfGuests": "4",
+      "Status": "confirmed"
     },
     {
-      "ReservationID": {
-        "S": "RES006"
-      },
-      "CustomerID": {
-        "S": "CUST006"
-      },
-      "Name": {
-        "S": "เกษรา นะวะมันดร"
-      },
-      "Date": {
-        "S": "2025-10-19"
-      },
-      "Time": {
-        "S": "14:00"
-      },
-      "NumberOfGuests": {
-        "N": "6"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES006",
+      "CustomerID": "CUST006",
+      "Date": "2025-10-19",
+      "Time": "14:00",
+      "NumberOfGuests": "6",
+      "Status": "confirmed"
     },
     {
-      "ReservationID": {
-        "S": "RES007"
-      },
-      "CustomerID": {
-        "S": "CUST008"
-      },
-      "Name": {
-        "S": "วิชชากร ราชมณี"
-      },
-      "Date": {
-        "S": "2025-10-12"
-      },
-      "Time": {
-        "S": "16:00"
-      },
-      "NumberOfGuests": {
-        "N": "5"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES007",
+      "CustomerID": "CUST008",
+      "Date": "2025-10-12",
+      "Time": "16:00",
+      "NumberOfGuests": "5",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES008"
-      },
-      "CustomerID": {
-        "S": "CUST003"
-      },
-      "Name": {
-        "S": "สุกฤษตา นิลวิมล"
-      },
-      "Date": {
-        "S": "2025-09-28"
-      },
-      "Time": {
-        "S": "19:00"
-      },
-      "NumberOfGuests": {
-        "N": "1"
-      },
-      "Status": {
-        "S": "cancelled"
-      }
+      "ReservationID": "RES008",
+      "CustomerID": "CUST003",
+      "Date": "2025-09-28",
+      "Time": "19:00",
+      "NumberOfGuests": "1",
+      "Status": "cancelled"
     },
     {
-      "ReservationID": {
-        "S": "RES009"
-      },
-      "CustomerID": {
-        "S": "CUST003"
-      },
-      "Name": {
-        "S": "วาร์มูฮำหมัด ถนัดหัตถกรรม"
-      },
-      "Date": {
-        "S": "2025-10-23"
-      },
-      "Time": {
-        "S": "14:00"
-      },
-      "NumberOfGuests": {
-        "N": "5"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES009",
+      "CustomerID": "CUST003",
+      "Date": "2025-10-23",
+      "Time": "14:00",
+      "NumberOfGuests": "5",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES010"
-      },
-      "CustomerID": {
-        "S": "CUST001"
-      },
-      "Name": {
-        "S": "สุภาลินี ดาบเพ็ชร์"
-      },
-      "Date": {
-        "S": "2025-10-26"
-      },
-      "Time": {
-        "S": "17:00"
-      },
-      "NumberOfGuests": {
-        "N": "4"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES010",
+      "CustomerID": "CUST001",
+      "Date": "2025-10-26",
+      "Time": "17:00",
+      "NumberOfGuests": "4",
+      "Status": "confirmed"
     },
     {
-      "ReservationID": {
-        "S": "RES011"
-      },
-      "CustomerID": {
-        "S": "CUST004"
-      },
-      "Name": {
-        "S": "อนุชา รื่นรมย์"
-      },
-      "Date": {
-        "S": "2025-10-05"
-      },
-      "Time": {
-        "S": "11:00"
-      },
-      "NumberOfGuests": {
-        "N": "2"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES011",
+      "CustomerID": "CUST004",
+      "Date": "2025-10-05",
+      "Time": "11:00",
+      "NumberOfGuests": "2",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES012"
-      },
-      "CustomerID": {
-        "S": "CUST010"
-      },
-      "Name": {
-        "S": "กุลธิดา ศรีบุญเรือง"
-      },
-      "Date": {
-        "S": "2025-10-06"
-      },
-      "Time": {
-        "S": "18:30"
-      },
-      "NumberOfGuests": {
-        "N": "5"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES012",
+      "CustomerID": "CUST010",
+      "Date": "2025-10-06",
+      "Time": "18:30",
+      "NumberOfGuests": "5",
+      "Status": "confirmed"
     },
     {
-      "ReservationID": {
-        "S": "RES013"
-      },
-      "CustomerID": {
-        "S": "CUST002"
-      },
-      "Name": {
-        "S": "สันติสุข สุขใจ"
-      },
-      "Date": {
-        "S": "2025-10-10"
-      },
-      "Time": {
-        "S": "12:00"
-      },
-      "NumberOfGuests": {
-        "N": "3"
-      },
-      "Status": {
-        "S": "cancelled"
-      }
+      "ReservationID": "RES013",
+      "CustomerID": "CUST002",
+      "Date": "2025-10-10",
+      "Time": "12:00",
+      "NumberOfGuests": "3",
+      "Status": "cancelled"
     },
     {
-      "ReservationID": {
-        "S": "RES014"
-      },
-      "CustomerID": {
-        "S": "CUST009"
-      },
-      "Name": {
-        "S": "ปรเมศวร์ พิพัฒน์"
-      },
-      "Date": {
-        "S": "2025-10-15"
-      },
-      "Time": {
-        "S": "19:30"
-      },
-      "NumberOfGuests": {
-        "N": "7"
-      },
-      "Status": {
-        "S": "pending"
-      }
+      "ReservationID": "RES014",
+      "CustomerID": "CUST009",
+      "Date": "2025-10-15",
+      "Time": "19:30",
+      "NumberOfGuests": "7",
+      "Status": "pending"
     },
     {
-      "ReservationID": {
-        "S": "RES015"
-      },
-      "CustomerID": {
-        "S": "CUST006"
-      },
-      "Name": {
-        "S": "วารุณี มีสุข"
-      },
-      "Date": {
-        "S": "2025-10-20"
-      },
-      "Time": {
-        "S": "20:00"
-      },
-      "NumberOfGuests": {
-        "N": "2"
-      },
-      "Status": {
-        "S": "confirmed"
-      }
+      "ReservationID": "RES015",
+      "CustomerID": "CUST006",
+      "Date": "2025-10-20",
+      "Time": "20:00",
+      "NumberOfGuests": "2",
+      "Status": "confirmed"
     }
   ]
 }
