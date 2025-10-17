@@ -28,7 +28,7 @@ def lambda_handler(event, context):
             if not item:
                 return {
                     'statusCode': 404,
-                    'body': json.dumps({'message': 'Product not found'})
+                    'body': json.dumps({'message': 'Product not found'}, ensure_ascii=False)
                 }
 
             body = json.dumps(item, cls=DecimalEncoder)
@@ -52,5 +52,5 @@ def lambda_handler(event, context):
         print(e)
         return {
             'statusCode': 500,
-            'body': json.dumps({'message': 'Internal server error'})
+            'body': json.dumps({'message': 'Internal server error'}, ensure_ascii=False)
         }
