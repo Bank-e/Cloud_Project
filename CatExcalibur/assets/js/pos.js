@@ -74,10 +74,23 @@ function updateCart() {
     cartCountSpan.textContent = itemCount;
 }
 
+// สั่งสินค้าไปหลังบ้าน
+function orders() {
+    if (cart.length === 0) {
+        alert('กรุณาเลือกสินค้าก่อนสั่งสินค้า');
+        return;
+    }
+    
+    // บันทึกข้อมูลตะกร้าใน sessionStorage (optional)
+    // sessionStorage.setItem('cart', JSON.stringify(cart));
+    
+    window.location.href = 'checkout.html';
+}
+
 // ไปหน้าชำระเงิน
 function checkout() {
     if (cart.length === 0) {
-        alert('กรุณาเลือกสินค้าก่อนชำระเงิน');
+        alert('กรุณาสั่งสินค้าก่อนชำระเงิน');
         return;
     }
     

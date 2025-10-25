@@ -1,7 +1,6 @@
 "ReservationID","CustomerID","Date","NumberOfGuests","Status","Time"
 "RES010","CUST001","2025-10-26","4","confirmed","17:00"
 "RES003","CUST006","2025-09-30","3","pending","20:00"
-"RES569818","https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com/prod/reservation-status","2025-10-25","2","Confirm","19:00"
 "RES001","CUST008","2025-10-04","4","cancelled","13:00"
 "RES372207","c50fa045-fa11-440f-aa33-2b3aaafd1919","2025-10-25","2","Confirm","19:00"
 "RES015","CUST006","2025-10-20","2","confirmed","20:00"

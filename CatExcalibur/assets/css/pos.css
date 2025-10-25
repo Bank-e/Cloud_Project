@@ -232,7 +232,8 @@ body {
     margin-bottom: 15px;
 }
 
-.checkout-btn {
+.checkout-btn,
+.orders-btn {
     width: 100%;
     background: #2196F3;
     color: white;
@@ -245,7 +246,8 @@ body {
     transition: background 0.3s ease;
 }
 
-.checkout-btn:hover {
+.checkout-btn:hover,
+.orders-btn:hover {
     background: #1976D2;
 }
 

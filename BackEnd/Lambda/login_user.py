@@ -10,10 +10,8 @@ def lambda_handler(event, context):
         username = body.get('username')
         password = body.get('password')
 
-        # Get user data from DynamoDB using the GSI
         response = dynamodb_client.query(
             TableName=CUSTOMERS_TABLE,
-            IndexName='Username-index', # ระบุชื่อ GSI ที่นี่
             KeyConditionExpression='Username = :uname',
             ExpressionAttributeValues={
                 ':uname': {'S': username}
@@ -24,6 +22,7 @@ def lambda_handler(event, context):
             return {'statusCode': 401, 'body': json.dumps({'error': 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง'}, ensure_ascii=False)}
             
         item = response['Items'][0]
+        
         if item.get('Password', {}).get('S') != password:
             return {'statusCode': 401, 'body': json.dumps({'error': 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง'}, ensure_ascii=False)}
 
@@ -31,7 +30,8 @@ def lambda_handler(event, context):
         return {
             'statusCode': 200,
             'body': json.dumps({
-                'CustomerID': item.get('CustomerID', {}).get('S'),
+                # สันนิษฐานว่ามี CustomerID เป็น attribute แต่ไม่ใช่ key
+                'CustomerID': item.get('CustomerID', {}).get('S'), 
                 'Username': item['Username']['S'],
                 'PhoneNumber': item['PhoneNumber']['S'],
                 'Points': int(item['Points']['N'])
