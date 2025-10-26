@@ -11,7 +11,7 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="reservation.html" class="nav-link">Booking</a>
         <a href="sales_history.html" class="nav-link">History</a>
-        <a href="login.html" class="nav-link">👤</a>
+        <a href="member_profile.html" class="nav-link">👤</a>
     </div>
 
     <div class="container">
@@ -19,22 +19,28 @@
             <div class="logo" style="margin: 0 auto 30px;">🐾</div>
             <h2 style="text-align: center; margin-bottom: 30px;">ยืนยันการจอง</h2>
             
-            <div class="info-group">
+            <p id="loadingMessage" style="color: #666; font-size: 16px; margin-bottom: 20px;">กำลังโหลดรายละเอียดการจอง...</p>
+
+            <div class="info-group" id="reservationDetails">
                 <div class="info-row">
                     <span class="info-label">หมายเลขการจอง:</span>
-                    <span class="info-value">RE8749202023</span>
+                    <span class="info-value" id="displayReservationId">...</span> 
+                </div>
+                <div class="info-row">
+                    <span class="info-label">สถานะ:</span>
+                    <span class="info-value"><span class="status-badge status-waiting" id="displayStatus">Loading</span></span> 
                 </div>
                 <div class="info-row">
                     <span class="info-label">วันที่</span>
-                    <span class="info-value">08 / 08 / 2025</span>
+                    <span class="info-value" id="displayDate">...</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">เวลา</span>
-                    <span class="info-value">12:00</span>
+                    <span class="info-value" id="displayTime">...</span>
                 </div>
                 <div class="info-row">
                     <span class="info-label">จำนวน</span>
-                    <span class="info-value">2 ที่นั่ง</span>
+                    <span class="info-value" id="displayGuests">... ที่นั่ง</span>
                 </div>
             </div>
             
@@ -42,22 +48,26 @@
                 <div class="qr-placeholder"></div>
             </div>
             
-            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Booking ID</p>
+            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Booking QR Code</p>
             
             <button class="btn btn-outline" style="margin-bottom: 15px;" onclick="window.location.href='reservation.html'">
                 แก้ไขข้อมูลการจอง
             </button>
             
             <button class="btn btn-primary" onclick="confirmBooking()">
-                ยืนยันการจอง
+                ยืนยันการจอง (สู่หน้าเมนู)
             </button>
         </div>
     </div>
 
+    <script src="assets/js/booking_confirm.js"></script> 
+    
     <script>
+        // ฟังก์ชันที่เรียกเมื่อกดปุ่มยืนยัน
         function confirmBooking() {
-            alert('ยืนยันการจองสำเร็จ!');
-            window.location.href = 'menu.html';
+            alert('ยืนยันการจองและเข้าสู่หน้ารายการสั่งซื้อสำเร็จ!');
+            // นำไปยังหน้าสั่งซื้อ POS/Menu
+            window.location.href = 'pos.html';
         }
     </script>
 </body>

@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('CurrentReservationTime', reservationData.Time);
                 localStorage.setItem('CurrentReservationGuests', reservationData.NumberOfGuests);
 
+                //window.location.href = 'booking_confirm.html'; 
                 window.location.href = 'booking_confirm.html'; 
 
             } else {
