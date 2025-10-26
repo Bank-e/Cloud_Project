@@ -24,21 +24,12 @@
             <div class="checkout-summary">
                 <div class="total-row">
                     <span>Total</span>
-                    <span>329.00</span>
+                    <span id="totalAmount">0.00</span> 
                 </div>
                 
-                <div class="item-row">
-                    <span>1 Fried chicken</span>
-                    <span>฿189.00</span>
-                </div>
-                <div class="item-row">
-                    <span>1 cola (M)</span>
-                    <span>฿50.00</span>
-                </div>
-                <div class="item-row">
-                    <span>1 creamy fresh</span>
-                    <span>฿90.00</span>
-                </div>
+                <div id="itemDetailsContainer">
+                    </div>
+
             </div>
             
             <div class="payment-grid">
@@ -47,38 +38,12 @@
                 <button class="payment-btn full-width" onclick="selectPayment('Credit')">Credit</button>
             </div>
             
-            <button class="btn btn-primary" onclick="confirmPayment()">
+            <button class="btn btn-primary" id="confirmPaymentButton" onclick="confirmPayment()">
                 Confirm Payment
             </button>
         </div>
     </div>
 
-    <script>
-        let selectedPayment = '';
-        
-        function selectPayment(method) {
-            selectedPayment = method;
-            // Highlight selected payment
-            const buttons = document.querySelectorAll('.payment-btn');
-            buttons.forEach(btn => {
-                if (btn.textContent === method) {
-                    btn.style.background = '#26c6da';
-                    btn.style.color = 'white';
-                } else {
-                    btn.style.background = 'white';
-                    btn.style.color = '#26c6da';
-                }
-            });
-        }
-        
-        function confirmPayment() {
-            if (selectedPayment) {
-                alert('ชำระเงินสำเร็จด้วย ' + selectedPayment + '!');
-                window.location.href = 'sales_history.html';
-            } else {
-                alert('กรุณาเลือกวิธีการชำระเงิน');
-            }
-        }
-    </script>
+    <script src="assets/js/checkout.js"></script> 
 </body>
 </html>

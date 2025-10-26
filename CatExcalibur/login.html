@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .password-group {
+            /* 1. สำคัญ: ทำให้เป็น Reference Point */
+            position: relative; 
+            /* หากมี padding หรือ margin มากไปอาจทำให้ตำแหน่งเพี้ยน */
+        }
+        
+        .password-toggle {
+            /* 2. สำคัญ: ทำให้ไอคอนลอยอยู่บน Input */
+            position: absolute; 
+            
+            /* 3. จัดตำแหน่งให้อยู่ด้านขวาและกึ่งกลางในแนวตั้ง */
+            right: 15px; /* ปรับระยะห่างจากขวา */
+            top: 50%;
+            transform: translateY(-50%);
+            
+            /* 4. สไตล์เพิ่มเติม */
+            cursor: pointer;
+            color: #888; /* ทำให้ไอคอนสีเทาดูดีขึ้น */
+            z-index: 10; /* ให้แน่ใจว่าคลิกไอคอนได้ */
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -22,10 +45,14 @@
                 <div class="form-group">
                     <input type="text" id="Username" class="form-input" placeholder="Username" required>
                 </div>
-                <div class="form-group">
+
+                <div class="form-group password-group"> 
                     <input type="password" id="Password" class="form-input" placeholder="Password" required>
+                    <span class="password-toggle" id="togglePassword">
+                        <i id="toggleIcon" class="fa-regular fa-eye"></i> 
+                    </span> 
                 </div>
-                
+
                 <button type="submit" id="btn-submit" class="btn btn-primary">Login</button>
             </form>
         </div>
