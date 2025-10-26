@@ -5,13 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Management - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* 💡 แก้ไข: ลดขนาดปุ่ม Pagination ลงประมาณ 4 เท่า */
+        .pagination-controls .page-btn {
+            background: #00bcd4;
+            color: white;
+            padding: 5px 8px; /* ลดลงจาก 10px 15px */
+            margin: 0 3px; /* ลดลงจาก 0 5px */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px; /* ลดขนาดตัวอักษร */
+        }
+
+        .pagination-controls .page-btn:hover:not(:disabled) {
+            background: #0097a7;
+        }
+
+        .pagination-controls .page-btn:disabled {
+            background: #cccccc; 
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls .page-number-btn {
+            background: #00bcd4; 
+            color: white;
+            padding: 5px 8px; /* ลดลงจาก 10px 15px */
+            margin: 0 1px; /* ลดลงจาก 0 2px */
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px; /* ลดขนาดตัวอักษร */
+            min-width: 30px; /* ลดลงจาก 45px */
+            text-align: center;
+        }
+
+        .pagination-controls .page-number-btn.active {
+            background: #4fc3f7; 
+            color: #343a40; 
+        }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0; /* ลดลงจาก 20px 0 */
+            margin-top: 10px; /* ลดลงจาก 15px */
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="reservation.html" class="nav-link">Booking</a>
         <a href="sales_history.html" class="nav-link">History</a>
-        <a href="login.html" class="nav-link">👤</a>
+        <a href="member_profile.html" class="nav-link">👤</a>
     </div>
 
     <div class="container-xlarge">
@@ -25,35 +76,33 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Reservation</th>
-                            <th>Name</th>
                             <th>Date</th>
+                            <th>Time</th>
+                            <th>Customer ID</th>
+                            <th>Guests</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr onclick="alert('รายละเอียดการจอง: Res-001')">
-                            <td>Res-001</td>
-                            <td>John</td>
-                            <td>10:00 AM</td>
-                        </tr>
-                        <tr onclick="alert('รายละเอียดการจอง: Res-002')">
-                            <td>Res-002</td>
-                            <td>Nim</td>
-                            <td>10:00 PM</td>
-                        </tr>
-                        <tr onclick="alert('รายละเอียดการจอง: Res-003')">
-                            <td>Res-003</td>
-                            <td>Fire</td>
-                            <td>11:50 AM</td>
-                        </tr>
+                    <tbody id="reservationsTableBody">
+                        <tr><td colspan="4" style="text-align: center; padding: 20px;">กำลังโหลดรายการจองที่ยืนยันแล้ว...</td></tr>
                     </tbody>
                 </table>
             </div>
             
+            <div class="pagination-controls">
+                <button class="page-btn nav-btn" id="prevPageBtn" onclick="changePage(-1)" disabled>« Prev</button>
+                
+                <div class="page-numbers" id="pageNumbersContainer">
+                </div>
+                
+                <button class="page-btn nav-btn" id="nextPageBtn" onclick="changePage(1)" disabled>Next »</button>
+            </div>
+
             <button class="btn btn-primary" onclick="alert('เปิดกล้อง QR Scanner')">
                 Scan QR +
             </button>
         </div>
     </div>
+    
+    <script src="assets/js/reservation_management.js"></script>
 </body>
 </html>
