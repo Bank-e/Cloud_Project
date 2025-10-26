@@ -5,13 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Reservations - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .pagination-controls .page-btn {
+            background: #00bcd4;
+            color: white;
+            padding: 5px 8px; 
+            margin: 0 3px; 
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            font-size: 12px; 
+        }
+
+        .pagination-controls .page-btn:hover:not(:disabled) {
+            background: #0097a7;
+        }
+
+        .pagination-controls .page-btn:disabled {
+            background: #cccccc; 
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        .pagination-controls .page-number-btn {
+            background: #00bcd4; 
+            color: white;
+            padding: 5px 8px; 
+            margin: 0 1px; 
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            font-size: 12px; 
+            min-width: 30px; 
+            text-align: center;
+        }
+
+        .pagination-controls .page-number-btn.active {
+            background: #4fc3f7; 
+            color: #343a40; 
+        }
+
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0; 
+            margin-top: 10px; 
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="reservation.html" class="nav-link">Booking</a>
         <a href="sales_history.html" class="nav-link">History</a>
-        <a href="login.html" class="nav-link">👤</a>
+        <a href="member_profile.html" class="nav-link">👤</a> 
     </div>
 
     <div class="container-large">
@@ -31,33 +83,27 @@
                             <th>Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>13/04/2025</td>
-                            <td>10:30</td>
-                            <td>1</td>
-                            <td><span class="status-badge status-confirm">Confirm</span></td>
-                        </tr>
-                        <tr>
-                            <td>11/04/2025</td>
-                            <td>13:00</td>
-                            <td>3</td>
-                            <td><span class="status-badge status-waiting">Waiting online</span></td>
-                        </tr>
-                        <tr>
-                            <td>10/04/2025</td>
-                            <td>12:50</td>
-                            <td>2</td>
-                            <td><span class="status-badge status-cancel">cancel</span></td>
-                        </tr>
+                    <tbody id="reservationsTableBody">
+                        <tr><td colspan="4" style="text-align: center; padding: 20px;">กำลังโหลดประวัติการจอง...</td></tr>
                     </tbody>
                 </table>
             </div>
             
-            <button class="btn btn-primary" onclick="window.location.href='reservation-form.html'">
+            <div class="pagination-controls">
+                <button class="page-btn nav-btn" id="prevPageBtn" onclick="changePage(-1)" disabled>« Prev</button>
+                
+                <div class="page-numbers" id="pageNumbersContainer">
+                </div>
+                
+                <button class="page-btn nav-btn" id="nextPageBtn" onclick="changePage(1)" disabled>Next »</button>
+            </div>
+            
+            <button class="btn btn-primary" onclick="window.location.href='reservation.html'">
                 Confirm Reservation
             </button>
         </div>
     </div>
+    
+    <script src="assets/js/my_reservations.js"></script>
 </body>
 </html>
