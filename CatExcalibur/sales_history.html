@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales History - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* 1. สไตล์ปุ่ม Navigation (Prev/Next) และปุ่มตัวเลขปกติ */
+        .pagination-controls .page-btn {
+            /* ใช้สีฟ้าเข้ม/น้ำเงิน (Blue/Teal) ที่ใกล้เคียงกับสีของธีม */
+            background: #00bcd4; /* สี Cyan/Teal (สีเดียวกับปุ่ม Login/Confirm) */
+            color: white;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .pagination-controls .page-btn:hover:not(:disabled) {
+            background: #0097a7; /* สีที่เข้มขึ้นเมื่อโฮเวอร์ */
+        }
+
+        .pagination-controls .page-btn:disabled {
+            /* ทำให้ปุ่ม Disabled ดูจางและเป็นสีเทา */
+            background: #cccccc; 
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        /* 2. สไตล์ปุ่มตัวเลขหน้า (Page Number Buttons) */
+        .pagination-controls .page-number-btn {
+            /* ใช้สไตล์ร่วมกับ .page-btn แต่กำหนดความกว้างขั้นต่ำ */
+            background: #00bcd4; 
+            color: white;
+            padding: 10px 15px;
+            margin: 0 2px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .pagination-controls .page-number-btn:hover {
+            background: #0097a7;
+        }
+
+        /* 3. สไตล์ปุ่มหน้าปัจจุบัน (Active Page) */
+        .pagination-controls .page-number-btn.active {
+            /* ใช้สีที่สว่างกว่าหรือสีเด่นเพื่อให้รู้ว่าเป็นหน้าปัจจุบัน */
+            background: #4fc3f7; /* สีฟ้าอ่อนกว่า */
+            color: #343a40; /* ตัวอักษรสีเข้มเพื่อความคมชัด */
+        }
+
+        /* 4. จัดวางปุ่มทั้งหมดให้อยู่ตรงกลาง (จากโค้ดเดิม) */
+        .pagination-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -21,44 +83,35 @@
                 <h2>Sales History</h2>
             </div>
             
-            <div class="pagination">
-                <button class="page-btn">«</button>
-                <button class="page-btn">»</button>
-            </div>
-            
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Date</th>
                             <th>Items</th>
-                            <th>Qty</th>
+                            <th>Guests</th>
                             <th>Payment</th>
+                            <th>Amount</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr onclick="alert('รายละเอียดการขาย')">
-                            <td>13/04/2025</td>
-                            <td>2 items</td>
-                            <td>1</td>
-                            <td>Cash</td>
-                        </tr>
-                        <tr onclick="alert('รายละเอียดการขาย')">
-                            <td>11/04/2025</td>
-                            <td>5 items</td>
-                            <td>3</td>
-                            <td>Credit card</td>
-                        </tr>
-                        <tr onclick="alert('รายละเอียดการขาย')">
-                            <td>10/04/2025</td>
-                            <td>3 items</td>
-                            <td>2</td>
-                            <td>PromptPay</td>
-                        </tr>
+                    <tbody id="salesTableBody">
+                        <tr><td colspan="5" style="text-align: center; padding: 20px;">กำลังโหลดประวัติการขาย...</td></tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="pagination-controls">
+                <button class="page-btn nav-btn" id="prevPageBtn" onclick="changePage(-1)" disabled>« Prev</button>
+                
+                <div class="page-numbers" id="pageNumbersContainer">
+                    </div>
+                
+                <button class="page-btn nav-btn" id="nextPageBtn" onclick="changePage(1)" disabled>Next »</button>
+            </div>
+            
         </div>
     </div>
+    
+    <script src="assets/js/sales_history.js"></script>
 </body>
 </html>
