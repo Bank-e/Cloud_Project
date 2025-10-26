@@ -41,11 +41,55 @@
     </div>
 
     <script>
-        document.getElementById('registerForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('ลงทะเบียนสำเร็จ!');
-            window.location.href = 'index.html';
-        });
+    document.getElementById('registerForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // 1. ดึงข้อมูลจากฟอร์ม
+        const username = document.querySelector('input[placeholder="Username"]').value;
+        const password = document.querySelector('input[placeholder="Password"]').value;
+        const confirmPass = document.querySelector('input[placeholder="Confirm Password"]').value;
+        const email = document.querySelector('input[placeholder="Email"]').value;
+        const phone = document.querySelector('input[placeholder="Tel"]').value;
+
+        if (password !== confirmPass) {
+            alert('รหัสผ่านไม่ตรงกัน');
+            return;
+        }
+
+        // 2. กำหนด API Endpoint จาก "config API gateway.json"
+        const API_URL = 'https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com/register';
+
+        // 3. เตรียมข้อมูลที่จะส่ง (ต้องตรงกับที่ Lambda "register_user.py" คาดหวัง)
+        const payload = {
+            username: username,
+            password: password,
+            email: email,
+            phoneNumber: phone // Lambda คาดหวัง 'phoneNumber'
+        };
+
+        try {
+            // 4. ส่ง Request ไปยัง API Gateway
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // 5. หาก Lambda (register_user.py) ทำงานสำเร็จ
+                alert(result.message || 'ลงทะเบียนสำเร็จ!');
+                window.location.href = 'login.html'; // ไปหน้า login
+            } else {
+                // 6. หาก Lambda คืนค่า error (เช่น ชื่อซ้ำ)
+                alert('ข้อผิดพลาด: ' + (result.error || 'ไม่สามารถลงทะเบียนได้'));
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('เกิดข้อผิดพลาดในการเชื่อมต่อ');
+        }
+    });
     </script>
 </body>
 </html>
