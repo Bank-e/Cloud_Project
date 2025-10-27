@@ -10,6 +10,7 @@
     <div class="navbar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="reservation.html" class="nav-link">Booking</a>
+        <a href="my_reservations.html" class="nav-link">My Reservations</a>
         <a href="sales_history.html" class="nav-link">History</a>
         <a href="member_profile.html" class="nav-link">👤</a>
     </div>
@@ -17,11 +18,11 @@
     <div class="container">
         <div class="card" style="text-align: center;">
             <div class="logo" style="margin: 0 auto 30px;">🐾</div>
-            <h2 style="text-align: center; margin-bottom: 30px;">ยืนยันการจอง</h2>
+            <h2 style="text-align: center; margin-bottom: 30px;">รายละเอียดการจอง</h2>
             
             <p id="loadingMessage" style="color: #666; font-size: 16px; margin-bottom: 20px;">กำลังโหลดรายละเอียดการจอง...</p>
 
-            <div class="info-group" id="reservationDetails">
+            <div class="info-group" id="reservationDetails" style="display: none;">
                 <div class="info-row">
                     <span class="info-label">หมายเลขการจอง:</span>
                     <span class="info-value" id="displayReservationId">...</span> 
@@ -45,30 +46,32 @@
             </div>
             
             <div class="qr-code">
-                <div class="qr-placeholder"></div>
+                <div class="qr-placeholder" id="qrCodePlaceholder">QR CODE</div>
             </div>
             
             <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Booking QR Code</p>
             
+            <!-- ปุ่มยืนยันการจองและเข้าสู่หน้าสั่งซื้อ (Primary Action) -->
+            <button class="btn btn-primary" id="proceedButton" onclick="proceedToOrdering()" style="margin-bottom: 15px;">
+                ยืนยันการจองและเข้าสู่หน้าสั่งซื้อ
+            </button>
+
+            <!-- ปุ่มแก้ไข -->
             <button class="btn btn-outline" style="margin-bottom: 15px;" onclick="window.location.href='reservation.html'">
                 แก้ไขข้อมูลการจอง
             </button>
             
-            <button class="btn btn-primary" onclick="confirmBooking()">
-                ยืนยันการจอง (สู่หน้าเมนู)
+            <!-- ปุ่มยกเลิกการจอง (Danger Action) -->
+            <button class="btn btn-danger" id="cancelButton" onclick="cancelReservation()">
+                ยกเลิกการจอง
             </button>
+            
+            <!-- ข้อความแสดงผลเมื่อยกเลิกสำเร็จ -->
+            <p id="cancellationMessage" style="color: #dc3545; font-weight: bold; margin-top: 15px; display: none;">การจองนี้ถูกยกเลิกแล้ว</p>
+
         </div>
     </div>
 
     <script src="assets/js/booking_confirm.js"></script> 
-    
-    <script>
-        // ฟังก์ชันที่เรียกเมื่อกดปุ่มยืนยัน
-        function confirmBooking() {
-            alert('ยืนยันการจองและเข้าสู่หน้ารายการสั่งซื้อสำเร็จ!');
-            // นำไปยังหน้าสั่งซื้อ POS/Menu
-            window.location.href = 'pos.html';
-        }
-    </script>
 </body>
 </html>
