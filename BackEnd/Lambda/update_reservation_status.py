@@ -21,7 +21,7 @@ def lambda_handler(event, context):
             TableName=RESERVATIONS_TABLE,
             Key={
                 'ReservationID': {'S': reservation_id},
-                'CustomerID': {'S': customer_id} # เพิ่ม CustomerID ใน Key
+                #'CustomerID': {'S': customer_id} # เพิ่ม CustomerID ใน Key
             },
             UpdateExpression='SET #status = :val',
             ExpressionAttributeNames={'#status': 'Status'},
