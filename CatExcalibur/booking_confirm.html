@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="reservation.html" class="nav-link">Booking</a>
-        <a href="my_reservations.html" class="nav-link">My Reservations</a>
-        <a href="sales_history.html" class="nav-link">History</a>
-        <a href="member_profile.html" class="nav-link">👤</a>
-    </div>
+
+    <div class="navbar" id="main-navbar"></div>
 
     <div class="container">
         <div class="card" style="text-align: center;">
@@ -55,11 +50,6 @@
             <button class="btn btn-primary" id="proceedButton" onclick="proceedToOrdering()" style="margin-bottom: 15px;">
                 ยืนยันการจองและเข้าสู่หน้าสั่งซื้อ
             </button>
-
-            <!-- ปุ่มแก้ไข -->
-            <button class="btn btn-outline" style="margin-bottom: 15px;" onclick="window.location.href='reservation.html'">
-                แก้ไขข้อมูลการจอง
-            </button>
             
             <!-- ปุ่มยกเลิกการจอง (Danger Action) -->
             <button class="btn btn-danger" id="cancelButton" onclick="cancelReservation()">
@@ -73,5 +63,6 @@
     </div>
 
     <script src="assets/js/booking_confirm.js"></script> 
+    <script src="assets/js/navbar-generator.js"></script>
 </body>
 </html>

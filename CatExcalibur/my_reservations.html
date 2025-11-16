@@ -59,12 +59,7 @@
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="reservation.html" class="nav-link">Booking</a>
-        <a href="sales_history.html" class="nav-link">History</a>
-        <a href="member_profile.html" class="nav-link">👤</a> 
-    </div>
+    <div class="navbar" id="main-navbar"></div>
 
     <div class="container-large">
         <div class="card">
@@ -99,11 +94,12 @@
             </div>
             
             <button class="btn btn-primary" onclick="window.location.href='reservation.html'">
-                Create Reservation
+                Create Booking
             </button>
         </div>
     </div>
     
     <script src="assets/js/my_reservations.js"></script>
+    <script src="assets/js/navbar-generator.js"></script>
 </body>
 </html>

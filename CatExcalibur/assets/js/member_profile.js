@@ -41,13 +41,7 @@ function loadProfileData() {
 
 // 5. ฟังก์ชันสำหรับ Log Out (เรียกเมื่อคลิกปุ่ม)
 function logoutUser() {
-    // ลบข้อมูลที่เกี่ยวข้องกับการล็อกอินทั้งหมด
-    localStorage.removeItem('CustomerID');
-    localStorage.removeItem('Username');
-    localStorage.removeItem('Points');
-    
-    // ลบข้อมูลอื่นๆ ที่อาจเกี่ยวข้องกับการทำงานชั่วคราว
-    localStorage.removeItem('CurrentReservationID');
+    localStorage.clear();
     
     alert('คุณได้ออกจากระบบแล้ว');
     window.location.href = 'login.html'; // เปลี่ยนเส้นทางกลับไปหน้า Login

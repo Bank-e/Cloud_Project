@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('togglePassword');
     const toggleIcon = document.getElementById('toggleIcon'); // อ้างอิงถึงแท็ก <i>
 
+    localStorage.clear();
+
     if (toggleButton && passwordInput && toggleIcon) {
         // เพิ่ม Event Listener สำหรับการคลิกสลับที่ปุ่ม (span)
         toggleButton.addEventListener('click', function (e) {
@@ -76,13 +78,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 const result = await response.json();
 
                 if (response.ok && response.status === 200) {
-                    const { CustomerID, Username, Points } = result;
+                    const { CustomerID, Username, Points, Tokens, UserRole } = result;
 
-                    // Clear old data and store new data
-                    localStorage.clear();
+                    // ⭐️ ข้อมูลลูกค้า (จาก DynamoDB)
                     localStorage.setItem('CustomerID', CustomerID);
                     localStorage.setItem('Username', Username);
                     localStorage.setItem('Points', Points);
+
+                    // 🛡️ ข้อมูลสิทธิ์ (จาก Cognito)
+                    localStorage.setItem('AccessToken', Tokens.AccessToken); 
+                    localStorage.setItem('IdToken', Tokens.IdToken); // เก็บ IdToken เผื่อใช้
+                    localStorage.setItem('UserRole', UserRole); // <<--- เก็บ Role ที่ดึงมา
+
+                    console.log(Tokens.AccessToken)
+                    console.log(Tokens.IdToken)
+                    console.log(UserRole)
 
                     alert('เข้าสู่ระบบสำเร็จ!');
                     window.location.href = 'member_profile.html';

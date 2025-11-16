@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Excalibur - Home</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="CatExcalibur/assets/css/index.css">
 </head>
 <body>
     <div class="container">
@@ -22,12 +22,16 @@
     </div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            localStorage.clear();
+        });
+        
         function goToRegister() {
-            window.location.href = 'register.html';
+            window.location.href = 'CatExcalibur/register.html';
         }
 
         function goToLogin() {
-            window.location.href = 'login.html';
+            window.location.href = 'CatExcalibur/login.html';
         }
 
     </script>
