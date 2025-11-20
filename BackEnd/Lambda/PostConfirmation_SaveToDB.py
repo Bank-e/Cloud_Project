@@ -6,7 +6,7 @@ from botocore.exceptions import ClientError
 DYNAMODB_CLIENT = boto3.client('dynamodb', region_name='us-east-1')
 COGNITO_CLIENT = boto3.client('cognito-idp', region_name='us-east-1')
 CUSTOMERS_TABLE = 'Customers'
-USER_POOL_ID = 'us-east-1_Z1Y2xTrtU'
+USER_POOL_ID = 'us-east-1_0Ga5JJhMu'  
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

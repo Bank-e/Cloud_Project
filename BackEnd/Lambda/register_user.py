@@ -1,14 +1,30 @@
 import json
 import boto3
 import logging
+import hmac
+import hashlib
+import base64
 from botocore.exceptions import ClientError
 
-USER_POOL_ID = 'us-east-1_Z1Y2xTrtU'  
-APP_CLIENT_ID = '5bdjhh58rfudoj736qt9nskniq'
+USER_POOL_ID = 'us-east-1_0Ga5JJhMu'  
+APP_CLIENT_ID = '7fn1fd6cpnrvtpogg0r7mvqh3v'
+APP_CLIENT_SECRET = '1id6c8tdvg7e3av436orti82pp05er7lnsrbgruo5ln65d6rsftl'  # ← ต้องเพิ่ม Client Secret
 COGNITO_CLIENT = boto3.client('cognito-idp', region_name='us-east-1')
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+
+def calculate_secret_hash(username, client_id, client_secret):
+    """
+    คำนวณ SECRET_HASH สำหรับ Cognito
+    """
+    message = username + client_id
+    dig = hmac.new(
+        key=client_secret.encode('utf-8'),
+        msg=message.encode('utf-8'),
+        digestmod=hashlib.sha256
+    ).digest()
+    return base64.b64encode(dig).decode()
 
 def format_phone_number(phone_number):
     """
@@ -54,6 +70,11 @@ def lambda_handler(event, context):
         
         logger.info(f"[{step}] ✓ Username: {username}, Email: {email}, Phone: {phone_number}")
         
+        step = "calculating_secret_hash"
+        logger.info(f"[{step}] กำลังคำนวณ SECRET_HASH")
+        secret_hash = calculate_secret_hash(username, APP_CLIENT_ID, APP_CLIENT_SECRET)
+        logger.info(f"[{step}] ✓ SECRET_HASH คำนวณสำเร็จ")
+        
         step = "cognito_signup"
         logger.info(f"[{step}] กำลังลงทะเบียนกับ Cognito")
         
@@ -65,6 +86,7 @@ def lambda_handler(event, context):
         
         response = COGNITO_CLIENT.sign_up(
             ClientId=APP_CLIENT_ID,
+            SecretHash=secret_hash,  # ← เพิ่ม SECRET_HASH
             Username=username,
             Password=password,
             UserAttributes=user_attributes

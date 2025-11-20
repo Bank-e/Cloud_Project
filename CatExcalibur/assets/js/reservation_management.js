@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com';
+const API_BASE_URL = 'https://wpvr9cxmmj.execute-api.us-east-1.amazonaws.com/Cat_Excalibur';
 const CONFIRM_RESERVATIONS_URL = `${API_BASE_URL}/confirm-reservations`; 
 
 let allReservationsData = [];

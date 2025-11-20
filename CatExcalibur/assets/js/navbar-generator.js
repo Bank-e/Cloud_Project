@@ -46,7 +46,7 @@ function getRoleBasedLinks(isLoggedIn, userRole) {
     // ลิงก์ที่ทุกคนเห็น (Public - ส่วนที่ไม่มีการควบคุมสิทธิ์)
     const publicLinks = [
         { name: 'Home', href: '../index.html' },
-        { name: 'Rewards', href: 'reward.html' } 
+        { name: 'Rewards & Promotions', href: 'reward.html' } 
     ];
 
     // ลิงก์เฉพาะสมาชิก (สิ่งที่ลูกค้าเห็นนอกเหนือจาก Public)
@@ -54,9 +54,10 @@ function getRoleBasedLinks(isLoggedIn, userRole) {
         { name: 'Booking', href: 'reservation.html' },
         { name: 'My Reservations', href: 'my_reservations.html' }
     ];
-    
+
     // ลิงก์สำหรับพนักงาน/ผู้จัดการ (งานหลังบ้าน)
     const adminLinks = [
+        { name: 'Checkout', href: 'checkout.html' },
         { name: 'Manage Reservations', href: 'reservation_management.html' },
         { name: 'Sales History', href: 'sales_history.html' } 
     ];

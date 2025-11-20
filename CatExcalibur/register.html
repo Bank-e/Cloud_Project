@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="navbar" id="main-navbar"></div>
@@ -53,7 +54,8 @@
         }
 
         // 2. กำหนด API Endpoint จาก "config API gateway.json"
-        const API_URL = 'https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com/register';
+        const BASE_API_URL = 'https://wpvr9cxmmj.execute-api.us-east-1.amazonaws.com/Cat_Excalibur';
+        const API_URL = `${BASE_API_URL}/register`;
 
         // 3. เตรียมข้อมูลที่จะส่ง (ต้องตรงกับที่ Lambda "register_user.py" คาดหวัง)
         const payload = {

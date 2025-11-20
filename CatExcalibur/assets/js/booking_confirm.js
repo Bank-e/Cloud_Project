@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com'; 
+const API_BASE_URL = 'https://wpvr9cxmmj.execute-api.us-east-1.amazonaws.com/Cat_Excalibur'; 
 const RESERVATION_DETAILS_URL = `${API_BASE_URL}/reservation`; // GET /reservation/{reservationId}
 const UPDATE_STATUS_URL = `${API_BASE_URL}/reservation-status`; // PUT /reservation-status
 
@@ -178,8 +178,6 @@ async function cancelReservation() {
 // ฟังก์ชันยืนยันและไปหน้าสั่งซื้อ
 // ------------------------------------------
 function proceedToOrdering() {
-    // ลบ Reservation ID ชั่วคราวออกเมื่อดำเนินการต่อไปยังหน้าสั่งซื้อ
-    localStorage.removeItem('CurrentReservationID');
     alert('เข้าสู่หน้ารายการสั่งซื้อ');
     window.location.href = 'pos.html';
 }

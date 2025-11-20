@@ -1,0 +1,226 @@
+openapi: "3.0.1"
+info:
+  title: "CatExcaliburAPI"
+  version: "2025-10-14 14:05:12UTC"
+servers:
+- url: "https://wpvr9cxmmj.execute-api.us-east-1.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "Cat_Excalibur"
+paths:
+  /confirm-reservations:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /confirm-reservations"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_all_confirm_reservations/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /my-reservations:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /my-reservations"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_my_reservations/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /order-details:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /order-details"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_order_details/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /products:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /products"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_products/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /products/{productID}:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /products/{productID}"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_products/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+    parameters:
+    - name: "productID"
+      in: "path"
+      description: "Generated path parameter for productID"
+      required: true
+      schema:
+        type: "string"
+  /promotions:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /promotions"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_promotions/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /reservation/{reservationId}:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /reservation/{reservationId}"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_reservation_details/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+    parameters:
+    - name: "reservationId"
+      in: "path"
+      description: "Generated path parameter for reservationId"
+      required: true
+      schema:
+        type: "string"
+  /sales:
+    get:
+      responses:
+        default:
+          description: "Default response for GET /sales"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:get_sales_history/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /checkout:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /checkout"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:process_checkout/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /checkout/calculate:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /checkout/calculate"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:calculate_promotions/invocations"
+        connectionType: "INTERNET"
+  /login:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /login"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:login_user/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /orders:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /orders"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:create_order/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /register:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /register"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:register_user/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /reservation:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /reservation"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:create_reservation/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+  /search-customer:
+    post:
+      responses:
+        default:
+          description: "Default response for POST /search-customer"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:search_customer_by_phone/invocations"
+        connectionType: "INTERNET"
+  /reservation-status:
+    put:
+      responses:
+        default:
+          description: "Default response for PUT /reservation-status"
+      x-amazon-apigateway-integration:
+        payloadFormatVersion: "2.0"
+        type: "aws_proxy"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:920066117025:function:update_reservation_status/invocations"
+        connectionType: "INTERNET"
+        timeoutInMillis: 30000
+x-amazon-apigateway-cors:
+  allowMethods:
+  - "GET"
+  - "POST"
+  - "PUT"
+  allowHeaders:
+  - "*"
+  maxAge: 0
+  allowCredentials: false
+  allowOrigins:
+  - "*"
+x-amazon-apigateway-importexport-version: "1.0"

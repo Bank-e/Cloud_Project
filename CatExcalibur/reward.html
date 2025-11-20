@@ -16,51 +16,23 @@
                 <h2>Rewards & Promotions</h2>
             </div>
             
-            <div class="rewards-grid">
-                <div class="reward-item" style="background: #b3e5fc;" onclick="selectReward('ส่วนลด 10%')">
-                    <div class="reward-icon">🎁</div>
-                    <div class="reward-name">ส่วนลด 10%</div>
-                    <div class="reward-type">Voucher</div>
-                </div>
-                
-                <div class="reward-item" style="background: #80deea;" onclick="selectReward('ส่วนลด 25%')">
-                    <div class="reward-icon">🎁</div>
-                    <div class="reward-name">ส่วนลด 25%</div>
-                    <div class="reward-type">Voucher</div>
-                </div>
-                
-                <div class="reward-item" style="background: #26c6da;" onclick="selectReward('ส่วนลด 35%')">
-                    <div class="reward-icon">🎁</div>
-                    <div class="reward-name">ส่วนลด 35%</div>
-                    <div class="reward-type">Voucher</div>
-                </div>
-                
-                <div class="reward-item" style="background: #4fc3f7;" onclick="selectReward('ส่วนลด 50%')">
-                    <div class="reward-icon">🎁</div>
-                    <div class="reward-name">ส่วนลด 50%</div>
-                    <div class="reward-type">Voucher</div>
-                </div>
-                
-                <div class="reward-item" style="background: #80cbc4;" onclick="selectReward('ฟรี 1 ที่')">
-                    <div class="reward-icon">🎫</div>
-                    <div class="reward-name">ฟรี 1 ที่</div>
-                    <div class="reward-type">Ticket</div>
-                </div>
-                
-                <div class="reward-item" style="background: #f8bbd0;" onclick="selectReward('ฟรี 1 เค้ก')">
-                    <div class="reward-icon">🍰</div>
-                    <div class="reward-name">ฟรี 1 เค้ก</div>
-                    <div class="reward-type">Food</div>
-                </div>
+            <div id="user-info-status" style="margin-bottom: 20px;">
+                <p><strong>แต้มสะสมปัจจุบัน:</strong> <span id="current-points">...</span></p>
+                <p><strong>สถานะ:</strong> <span id="user-role-display">...</span></p>
             </div>
+
+            <div class="rewards-grid" id="rewards-list">
+                <p>กำลังโหลดโปรโมชั่น...</p>
+            </div>
+
+            <button id="apply-promo-btn" class="btn btn-primary" style="display:none; margin-top: 30px;">
+                ยืนยันการใช้โปรโมชั่น
+            </button>
+            <div id="selection-status" style="color: red; margin-top: 10px;"></div>
         </div>
     </div>
 
-    <script>
-        function selectReward(rewardName) {
-            alert('คุณเลือกรางวัล: ' + rewardName);
-        }
-    </script>
+    <script src="assets/js/reward.js"></script>
     <script src="assets/js/navbar-generator.js"></script>
 </body>
 </html>

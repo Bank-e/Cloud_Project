@@ -1,9 +1,9 @@
 // **การตั้งค่า API**
-const API_BASE_URL = 'https://ok4fdavpg8.execute-api.us-east-1.amazonaws.com'; // ต้องมี /prod/
+const API_BASE_URL = 'https://wpvr9cxmmj.execute-api.us-east-1.amazonaws.com/Cat_Excalibur'; // ต้องมี /prod/
 const PRODUCTS_URL = `${API_BASE_URL}/products`;
 const ORDERS_URL = `${API_BASE_URL}/orders`; // กำหนด Endpoint สำหรับ Orders
 
-const IMAGE_BASE_URL = 'https://cat-excalibur-products-image.s3.us-east-1.amazonaws.com';
+const IMAGE_BASE_URL = 'https://web-host-cat-excalibur.s3.us-east-1.amazonaws.com/CatExcalibur/assets/img';
 
 // ตารางแมปชื่อ Category ที่มาจาก API (ภาษาไทย) ไปยัง ID ของ Products Grid ใน HTML
 const CATEGORY_MAPPING = {
@@ -142,13 +142,11 @@ function removeItem(productID) {
 function updateCart() {
     const cartItemsDiv = document.getElementById('cartItems');
     const totalPriceSpan = document.getElementById('totalPrice');
-    const cartCountSpan = document.getElementById('cartCount');
 
     // ถ้าตะกร้าว่าง
     if (cart.length === 0) {
         cartItemsDiv.innerHTML = '<div class="empty-cart">ไม่มีสินค้าในตะกร้า</div>';
         totalPriceSpan.textContent = '0.00฿';
-        cartCountSpan.textContent = '0';
         return;
     }
 
@@ -179,7 +177,6 @@ function updateCart() {
 
     cartItemsDiv.innerHTML = html;
     totalPriceSpan.textContent = total.toFixed(2) + '฿';
-    cartCountSpan.textContent = itemCount;
 }
 
 // ----------------------------------------------------------------------
@@ -190,6 +187,20 @@ function updateCart() {
  * โค้ด Lambda จะบันทึก OrderID, CustomerID, และ Products (List) ลงใน Orders Table
  */
 async function submitOrder() {
+    // 1. ตรวจสอบสถานะการเป็นสมาชิก
+    const customerID = localStorage.getItem('CustomerID');
+    // เพิ่ม: ดึง ReservationID จาก Local Storage
+    const reservationID = localStorage.getItem('CurrentReservationID');
+
+    if (!customerID) {
+        alert('❌ ต้องเป็นสมาชิกและเข้าสู่ระบบก่อนจึงจะส่งคำสั่งซื้อได้');
+        return; 
+    }
+    if (!reservationID) {
+        alert('❌ ต้องผ่านการจองมาก่อน');
+        return; 
+    }
+
     if (cart.length === 0) {
         alert('กรุณาเลือกสินค้าก่อนส่งคำสั่งซื้อ');
         return;
@@ -197,8 +208,8 @@ async function submitOrder() {
 
     // 1. สร้าง Payload สำหรับ /orders API
     const orderPayload = {
-        // **สำคัญ**: ดึง CustomerID ที่บันทึกไว้จากการ Login หรือใช้ค่าเริ่มต้น
-        CustomerID: localStorage.getItem('CustomerID') || 'GUEST_CUST_ID', 
+        CustomerID: customerID, 
+        ReservationID: reservationID, // ส่งค่า null หากไม่มีการจอง
         
         // แปลงรูปแบบตะกร้าสินค้า [ProductID, QTY_Product]
         Products: cart.map(item => ({
@@ -221,6 +232,18 @@ async function submitOrder() {
 
         const data = await response.json();
 
+        if (response.status === 404) {
+            alert(`❌ ข้อผิดพลาด (404): ข้อมูลไม่พบ: ${data.error}`);
+            window.location.href = 'index.html'; // ส่งกลับหน้าหลัก
+            return;
+        }
+
+        if (response.status === 403) {
+            alert(`❌ ข้อผิดพลาด (403): สิทธิ์ไม่เพียงพอ หรือการจองนี้ถูกใช้แล้ว: ${data.error}`);
+            window.location.href = 'index.html'; // ส่งกลับหน้าหลัก
+            return;
+        }
+
         if (response.ok) {
             // Success: API ตอบกลับด้วย 200 OK
             if (data.OrderID) {
@@ -230,8 +253,9 @@ async function submitOrder() {
                 // **บันทึก OrderID ที่ได้มาไว้ใน Local Storage หรือตัวแปรสำหรับใช้ใน Checkout ต่อไป**
                 localStorage.setItem('CurrentOrderID', data.OrderID);
 
-                // หากสำเร็จ ให้นำไปยังหน้า Checkout หรือหน้ายืนยัน
-                window.location.href = 'checkout.html'; 
+                // อัปเดต UI เพื่อให้แสดงตะกร้าว่าง
+                clearCart();
+
             } else {
                 alert('คำสั่งซื้อไม่สำเร็จ (API ตอบกลับ 200 แต่ไม่มี OrderID)');
             }
@@ -248,23 +272,13 @@ async function submitOrder() {
     }
 }
 
-// ----------------------------------------------------------------------
-// **แก้ไขฟังก์ชัน orders() เดิมให้เรียก submitOrder()**
-// ----------------------------------------------------------------------
-
-function orders() {
-    // แทนที่ Logic เก่าด้วยการเรียกฟังก์ชันใหม่
-    submitOrder();
-}
-
-// **ฟังก์ชัน checkout() เดิม**
-function checkout() {
-    if (cart.length === 0) {
-        alert('ตะกร้าว่างเปล่า ไม่สามารถชำระเงินได้');
-        return;
-    }
-    // ใน POS จริง, orders() จะถูกเรียกก่อนจะไป checkout.html
-    window.location.href = 'checkout.html';
+// ตัวอย่างในฟังก์ชัน submitOrder() หรือ cancelOrder()
+function clearCart() {
+    // ล้าง Array cart
+    cart = [];
+    
+    // อัปเดต UI เพื่อให้แสดงตะกร้าว่าง
+    updateCart(); 
 }
 
 // ----------------------------------------------------------------------

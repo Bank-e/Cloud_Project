@@ -5,6 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Cat Excalibur</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        /* --- 1. ปรับระยะห่างปุ่มโปรโมชั่น --- */
+        #btn-select-promo {
+                margin-top: 25px;    /* ห่างจากยอดรวมด้านบน */
+                margin-bottom: 25px; /* ห่างจากปุ่มจ่ายเงินด้านล่าง */
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                background-color: #f8f9fa;
+                border-radius: 8px;
+                font-weight: bold;
+                color: #555;
+                cursor: pointer;
+                transition: all 0.2s;
+        }
+        /* เปลี่ยนสีเมื่อมีการเลือกโปรโมชั่นแล้ว ให้ดูเด่นขึ้น */
+        #btn-select-promo.has-promo {
+                border-color: #00A8A8;
+                color: #00A8A8;
+                background-color: #e0f7f7;
+        }
+        /* --- 2. ปรับปุ่มเลือกการจ่ายเงินให้ชัดเจน --- */
+        .payment-options {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 15px;
+        }
+        .payment-btn {
+                flex: 1;
+                padding: 15px;
+                border: 2px solid #e0e0e0; /* ขอบปกติสีจาง */
+                background-color: white;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                color: #666;
+                cursor: pointer;
+                transition: all 0.3s ease;
+        }
+        /* 🔥 ไฮไลท์ปุ่มที่ถูกเลือก (Selected State) */
+        .payment-btn.active {
+                background-color: #00A8A8; /* สีธีม (เขียวอมฟ้า) */
+                color: white;              /* ตัวหนังสือสีขาว */
+                border-color: #00A8A8;
+                box-shadow: 0 4px 12px rgba(0, 168, 168, 0.3); /* เงาฟุ้งๆ */
+                transform: translateY(-2px); /* ลอยขึ้นนิดนึง */
+        }
+        .payment-btn:hover:not(.active) {
+                background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar" id="main-navbar"></div>
@@ -16,26 +67,56 @@
                 <h2>Checkout</h2>
             </div>
             
-            <div class="checkout-summary">
-                <div class="total-row">
-                    <span>Total</span>
-                    <span id="totalAmount">0.00</span> 
+            <div id="customer-input-section">
+                <p><strong>ขั้นตอนที่ 1: ระบุตัวตนลูกค้า</strong></p>
+                <div class="form-group">
+                    <input type="tel" id="phone-number-input" class="form-input" placeholder="คีย์เบอร์โทรศัพท์ลูกค้า (0xx) หรือ Reservation ID">
+                </div>
+                <button id="search-customer-btn" class="btn btn-secondary full-width">ค้นหาลูกค้า</button>
+            </div>
+            
+            <div id="checkout-content" style="display: none;">
+                <p id="customer-welcome-text"><strong id="customer-data-text">ลูกค้า:</strong></p>
+            
+                <div class="checkout-summary">
+                    <div id="itemDetailsContainer"></div>
+                    
+                    <div class="total-row">
+                        <span>ยอดรวมเริ่มต้น</span>
+                        <span id="originalTotalAmount">0.00</span> 
+                    </div>
+            
+                    <div class="total-row promo-applied-row" id="promoDiscountRow" style="display:none; color: #4CAF50;">
+                        <span>ส่วนลดโปรโมชั่น</span>
+                        <span id="promoDiscountValue">-฿0.00</span> 
+                    </div>
+            
+                    <div class="total-row promo-applied-row" id="pointsDeductedRow" style="display:none; color: #FF9800;">
+                        <span>แต้มที่ใช้</span>
+                        <span id="pointsDeductedValue">0</span>
+                    </div>
+            
+                    <div class="total-row final-total-row">
+                        <span>ยอดชำระสุทธิ</span>
+                        <span id="finalTotalAmount">0.00</span> 
+                    </div>
+                </div>
+            </div>
+
+                <button id="btn-select-promo" onclick="goToRewards()">
+                    เลือกโปรโมชั่น (0 รายการ)
+                </button>
+
+                <div class="payment-options">
+                    <button class="payment-btn active" onclick="selectPayment(this, 'Cash')">Cash</button>
+                    <button class="payment-btn" onclick="selectPayment(this, 'PromptPay')">PromptPay</button>
+                    <button class="payment-btn" onclick="selectPayment(this, 'Credit')">Credit</button>
                 </div>
                 
-                <div id="itemDetailsContainer">
-                    </div>
-
+                <button class="btn btn-primary" id="confirmPaymentButton" onclick="confirmPayment()">
+                    Confirm Payment
+                </button>
             </div>
-            
-            <div class="payment-grid">
-                <button class="payment-btn" onclick="selectPayment('Cash')">Cash</button>
-                <button class="payment-btn" onclick="selectPayment('PromptPay')">PromptPay</button>
-                <button class="payment-btn full-width" onclick="selectPayment('Credit')">Credit</button>
-            </div>
-            
-            <button class="btn btn-primary" id="confirmPaymentButton" onclick="confirmPayment()">
-                Confirm Payment
-            </button>
         </div>
     </div>
 
